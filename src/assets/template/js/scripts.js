@@ -1,22 +1,10 @@
 $(function() {
-    $('select.styled').selectric({
-        maxHeight: 210
-    });
-
-
-    $('.open-popup-link').magnificPopup({
-        type:'inline'
-    });
-
-    $('.img-link').magnificPopup({
-        type  : 'image'
-    });
 
     $('[data-mask]').each(function() {
         input = $(this);
         mask = input.attr('data-mask');
         input.inputmask({"mask": mask});
-    })
+    });
 
     $('.toggle-menu').on('click', function () {
         $('.mobile-menu').slideToggle();
@@ -61,14 +49,13 @@ $(function() {
     initGratefulSlider('.grateful-slider');
     initAdvantagesSlider('.advantages-slider');
     initApplicationSlider('.application-slider');
-    //initPhotoSlider();
-    //initHowWorkSlider();
+
 
 
 });
 
 closeBlocks = function() {
-    if ($(window).width()>1000) {
+    if ($(window).width()>450) {
         return;
     }
     $('[data-toggle]').each(function(){
@@ -96,7 +83,7 @@ initGratefulSlider  = function(selector) {
 var slider_advantages = false;
 initAdvantagesSlider  = function(selector) {
 
-    if ($(window).width()<1000) {
+    if ($(window).width()<1050) {
         if (!slider_advantages) {
             $(selector).slick({
                 'autoplay': false,
@@ -105,21 +92,7 @@ initAdvantagesSlider  = function(selector) {
                 'slidesToShow': 1,
                 'slidesToScroll': 1,
                 'infinite': false,
-                'adaptiveHeight': true,
-                'responsive': [
-                    {
-                        breakpoint: 750,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 550,
-                        settings: {
-                            slidesToShow: 1,
-                        }
-                    }
-                ]
+                'adaptiveHeight': true
             });
             $(selector+" .slick-dots").wrap("<div class='slick-dots__wrapper'></div>");
             $(selector+" .slick-dots__wrapper").prepend('<span class="slick-dots-prev"></span>');
@@ -151,19 +124,13 @@ initApplicationSlider  = function(selector) {
                 'autoplay': false,
                 'arrows': false,
                 'dots': true,
-                'slidesToShow': 1,
+                'slidesToShow': 2,
                 'slidesToScroll': 1,
                 'infinite': false,
                 'adaptiveHeight': true,
                 'responsive': [
                     {
-                        breakpoint: 750,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 550,
+                        breakpoint: 450,
                         settings: {
                             slidesToShow: 1,
                         }

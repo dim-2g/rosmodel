@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
-    <link rel="stylesheet" href="/assets/template/vendor/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="/assets/template/css/main.css">
 
 </head>
@@ -34,8 +33,8 @@
                     </div>
                 </div>
                 <ul>
-                    <li><a href="#" data-goto=".prices__toggle">Наши цены</a></li>
-                    <li><a href="#" data-goto=".contacts__toggle">Контакты</a></li>
+                    <li><a href="#" data-goto=".to-prices">Наши цены</a></li>
+                    <li><a href="#" data-goto=".to-contacts">Контакты</a></li>
                 </ul>
             </div>
 
@@ -46,8 +45,8 @@
             </div>
             <div class="topline__menu">
                 <ul class="topline__list">
-                    <li><a href="#" data-goto=".prices">Наши цены</a></li>
-                    <li><a href="#" data-goto=".contacts">Контакты</a></li>
+                    <li><a href="#" data-goto=".to-prices">Наши цены</a></li>
+                    <li><a href="#" data-goto=".to-contacts">Контакты</a></li>
                 </ul>
             </div>
             <div class="topline__contacts">
@@ -526,7 +525,7 @@
         </div>
     </div>
 </div>
-
+<div class="to-prices"></div>
 <div class="prices__toggle toggle-caption active" data-toggle=".prices">
     <div class="container">
         <div class="toggle-caption__box">
@@ -627,7 +626,7 @@
 
     </div>
 </div>
-
+<div class="to-contacts"></div>
 <div class="contacts__toggle toggle-caption" data-toggle=".contacts">
     <div class="container">
         <div class="toggle-caption__box">
@@ -712,12 +711,9 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script src="assets/template/vendor/slick/slick.js"></script>
-<script src="assets/template/vendor/magnific-popup/magnific-popup.js"></script>
 <script src="assets/template/vendor/jquery.inputmask.bundle.js"></script>
 <script src="assets/template/vendor/fancybox/jquery.fancybox.min.js"></script>
 <link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css">
-<link rel="stylesheet" href="/assets/template/vendor/selectric/selectric.css" />
-<script src="/assets/template/vendor/selectric/jquery.selectric.min.js"></script>
 <script src="assets/template/js/scripts.js"></script>
 
 
@@ -882,8 +878,6 @@
                         pane: 'balloon'
                     });
                 map.geoObjects.add(placemark);
-                map.behaviors.disable('drag');
-
 
             }
 
@@ -896,6 +890,7 @@
         }
 
         map.behaviors.disable('scrollZoom');
+        //map.behaviors.disable('drag');
         //map.controls.add('zoomControl');
         // Если карта есть, то выставляем новый центр карты и меняем данные и позицию метки в соответствии с найденным адресом.
 
@@ -925,6 +920,7 @@
             });
         map_contacts.geoObjects.add(placemark);
         map_contacts.behaviors.disable('scrollZoom');
+        //map.behaviors.disable('drag');
         // Если карта есть, то выставляем новый центр карты и меняем данные и позицию метки в соответствии с найденным адресом.
 
     }

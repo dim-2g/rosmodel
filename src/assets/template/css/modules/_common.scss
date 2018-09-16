@@ -65,12 +65,15 @@ a{
 .header{
 
   //display: none;
-  @media($bp-larger-than-mobile){
+  @media($bp-larger-than-tablet){
     display: block;
     background: transparent url("/assets/template/images/banner.jpg") center top no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 490px;
     margin-bottom: 84px;
+  }
+  @media($bp-larger-than-desktop){
+    height: 600px;
   }
 }
 .topline-mobile{
@@ -84,7 +87,7 @@ a{
   left: 0;
   right: 0;
   z-index: 100;
-  @media($bp-larger-than-mobile){
+  @media($bp-larger-than-desktop){
     display: none;
   }
   &__burger{
@@ -153,7 +156,7 @@ a{
   padding-bottom: 1px;
   &__top{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: #4c4c4c;
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
@@ -223,7 +226,7 @@ a{
 
 .topline{
   display: none;
-  @media($bp-larger-than-mobile){
+  @media($bp-larger-than-desktop){
     display: flex;
   }
 
@@ -257,9 +260,13 @@ a{
     font-weight: bold;
     margin-bottom: 0;
     li{
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
       margin-bottom: 0;
+      @media($bp-larger-than-desktophd) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
   }
   &__contacts{
@@ -750,7 +757,7 @@ a{
     }
   }
   &__item{
-    @media($bp-larger-than-mobile) {
+    @media($bp-larger-than-desktop) {
       margin-right: 15px;
       margin-left: 15px;
       margin-bottom: 26px;
@@ -984,12 +991,26 @@ a{
     @media($bp-larger-than-mobile) {
       margin-right: 15px;
     }
+    @media($bp-larger-than-tablet) {
+      width: 50%;
+      flex-shrink: 0;
+    }
+    @media($bp-larger-than-desktophd) {
+      width: 770px;
+    }
   }
   &__map{
     margin-left: -15px;
     margin-right: -15px;
     height: 396px;
-    @media($bp-larger-than-mobile){
+    @media($bp-larger-than-tablet){
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      height: 400px;
+
+    }
+    @media($bp-larger-than-desktophd){
       margin-left: 0;
       margin-right: 0;
       width: 770px;
@@ -1008,6 +1029,9 @@ a{
     margin-bottom: 12px;
     width: 100%;
     @media($bp-larger-than-mobile){
+
+    }
+    @media($bp-larger-than-desktop){
       width: 370px;
     }
     iframe{
@@ -1077,8 +1101,12 @@ a{
     flex-wrap: wrap;
     margin-left: -5px;
     margin-right: -5px;
-    @media($bp-larger-than-mobile) {
+    @media($bp-larger-than-tablet) {
       padding: 0 0 30px 0;
+      justify-content: center;
+    }
+    @media($bp-larger-than-desktop) {
+      justify-content: space-between;
     }
   }
   &__image{
@@ -1150,11 +1178,15 @@ a{
     text-align: center;
     @media($bp-larger-than-mobile){
       max-width: 310px;
-      margin-top: 92px;
+      margin-top: 30px;
       font-size: 30px;
-      margin-bottom: 177px;
+      margin-bottom: 230px;
       line-height: 100%;
       text-align: left;
+    }
+    @media($bp-larger-than-desktop){
+      margin-bottom: 177px;
+      margin-top: 92px;
     }
   }
   &__list{
@@ -1244,10 +1276,14 @@ a{
     background-color: #fff;
     padding: 25px 30px 20px;
     min-height: 116px;
-    max-width: 370px;
+
     border: 1px solid $border-color;
     @media($bp-larger-than-mobile){
       min-height: 130px;
+      max-width: 330px;
+    }
+    @media($bp-larger-than-desktop){
+      max-width: 370px;
     }
   }
   &__name{
@@ -1282,11 +1318,14 @@ a{
   &__box{
     padding: 25px 15px 20px 15px;
     position: relative;
-    @media($bp-larger-than-mobile) {
+    @media($bp-larger-than-tablet) {
+      padding: 24px 20px 19px 20px;
+    }
+    @media($bp-larger-than-desktop) {
       padding: 24px 20px 19px 200px;
     }
     &:before{
-      @media($bp-larger-than-mobile) {
+      @media($bp-larger-than-desktop) {
         position: absolute;
         content: "";
         display: inline-block;
@@ -1645,7 +1684,7 @@ a{
       padding-right: 17px;
       white-space: nowrap;
       font-size: 14px;
-      @media($bp-larger-than-mobile){
+      @media($bp-larger-than-desktop){
         font-size: 16px;
         height: 40px;
       }
@@ -1667,7 +1706,7 @@ a{
         font-weight: bold;
         color: #355582;
         font-size: 16px;
-        @media($bp-larger-than-mobile){
+        @media($bp-larger-than-desktop){
           font-size: 20px;
         }
       }
@@ -1819,7 +1858,7 @@ $checkboxSizeAgreeMobile: 14px;
     border: 1px solid $border-color;
     z-index: 1;
     display: none;
-    @media($bp-larger-than-mobile) {
+    @media($bp-larger-than-desktop) {
       display: block;
     }
     &:before{
