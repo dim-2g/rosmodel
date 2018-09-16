@@ -737,11 +737,7 @@
     }
 
     function createMap(state, places) {
-        // Если карта еще не была создана, то создадим ее и добавим метку с адресом.
-        //alert(state.toSource());
-
         map = new ymaps.Map('map', state);
-
 
         MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
             '<div class="popover top">' +
@@ -907,7 +903,7 @@
 </script>
 
 <script>
-    //ymaps.ready(initContacts);
+    ymaps.ready(initContacts);
     function initContacts() {
         createMapContacts({center:[59.978246, 30.315464], zoom:16, controls:[], scroll: false}, '');
     }

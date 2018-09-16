@@ -58,10 +58,7 @@ $(function() {
 
     //скрываем блоки на мобильной версии
     closeBlocks();
-
-
-
-    initGratefulSlider();
+    initGratefulSlider('.grateful-slider');
     initAdvantagesSlider('.advantages-slider');
     initApplicationSlider('.application-slider');
     //initPhotoSlider();
@@ -82,9 +79,9 @@ closeBlocks = function() {
 };
 
 var slider_grateful = false;
-initGratefulSlider  = function() {
+initGratefulSlider  = function(selector) {
     if (!slider_grateful) {
-        $('.grateful-slider').slick({
+        $(selector).slick({
             'autoplay': false,
             'arrows': true,
             'dots': false,
@@ -193,59 +190,21 @@ initApplicationSlider  = function(selector) {
     }
 };
 
-/*
-var slider_photo = false;
-initPhotoSlider  = function() {
-    if (!slider_photo) {
-        $('.photo-slider').slick({
-            'autoplay': false,
-            'arrows': false,
-            'dots': true,
-            'slidesToShow': 6,
-            'slidesToScroll': 1,
-            'adaptiveHeight': true,
-            'responsive': [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 5,
-                    }
-                },
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 4,
-                    }
-                },
-                {
-                    breakpoint: 750,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 550,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                }
-            ]
-        });
-        slider_photo = true;
-    }
-};
 
-
-*/
-
+var doit;
 $(window).resize(function(){
-    var width = $(window).width();
-    //initPeopleSlider();
-    //initPhotoSlider();
-    //initHowWorkSlider();
-    //initApplicationSlider();
-
+    clearTimeout(doit);
+    doit = setTimeout(resizedw, 100);
 });
+
+function resizedw(){
+    var width = $(window).width();
+    closeBlocks();
+    initGratefulSlider('.grateful-slider');
+    initAdvantagesSlider('.advantages-slider');
+    initApplicationSlider('.application-slider');
+}
+
 
 
 $(document).scroll(function(){

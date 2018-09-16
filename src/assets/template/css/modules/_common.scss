@@ -477,7 +477,7 @@ a{
   @media($bp-larger-than-mobile) {
     font-size: 30px;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: -2px;
     line-height: 120%;
   }
 }
@@ -557,6 +557,9 @@ a{
   &__body{
     background: transparent url("/assets/template/images/earth__bg.jpg") center top no-repeat;
     padding: 34px 13px 11px 13px;
+    @media($bp-larger-than-mobile){
+      padding: 50px 26px 10px 26px;
+    }
   }
   &__list{
     font-size: 14px;
@@ -1010,7 +1013,7 @@ a{
     iframe{
       height: 164px !important;
       @media($bp-larger-than-mobile){
-        height: auto;
+        height: 208px !important;
       }
     }
     img{
@@ -1060,11 +1063,11 @@ a{
     display: block;
   }
   &__caption{
-    //margin-bottom: 40px;
     margin-bottom: 41px;
     display: none;
     @media($bp-larger-than-mobile){
       display: block;
+      margin-bottom: 30px;
     }
   }
   &__list{
@@ -1151,6 +1154,7 @@ a{
       font-size: 30px;
       margin-bottom: 177px;
       line-height: 100%;
+      text-align: left;
     }
   }
   &__list{
@@ -1361,6 +1365,7 @@ a{
       margin-bottom: 20px;
       @media($bp-larger-than-mobile) {
         width: 100%;
+        margin-bottom: 2px;
       }
     }
     &--submit{
@@ -1390,6 +1395,7 @@ a{
     padding-left: 20px;
     @media($bp-larger-than-mobile) {
       top: auto;
+      left: auto;
       position: relative;
       padding-left: 30px;
       padding-top: 12px;
@@ -1511,7 +1517,7 @@ a{
   //display: none;
   @media($bp-larger-than-mobile){
     display: block;
-    padding: 14px 0;
+    padding: 17px 0;
   }
   &__list {
     font-size: 13px;
@@ -1592,6 +1598,7 @@ a{
     display: none;
     @media($bp-larger-than-mobile){
       display: block;
+      margin-bottom: 28px;
     }
   }
   &__grid{
