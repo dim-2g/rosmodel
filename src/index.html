@@ -1,0 +1,940 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/assets/template/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/template/css/main.css">
+
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="topline-mobile">
+            <div class="topline-mobile__burger toggle-menu"><span></span></div>
+            <div class="topline-mobile__logo">
+                <a href="/" class=""><img src="/assets/template/images/logo-mobile.png" alt=""></a>
+            </div>
+            <a href="#" class="topline-mobile__callback" data-goto=".promo__bottom"></a>
+
+            <div class="mobile-menu">
+                <div class="mobile-menu__top">
+                    <div class="mobile-menu__contacts">
+                        <div><a href="tel:88009999999" class="mobile-menu__phone">8 800 999 99 99</a></div>
+                        <div><a href="mailto:info@domein.ru" class="mobile-menu__email">info@domain.ru</a></div>
+                    </div>
+                    <div class="mobile-menu__timework">
+                        <div class="mobile-menu__time">с 9 до 22</div>
+                        <div class="mobile-menu__hide">без выходных</div>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#" data-goto=".prices__toggle">Наши цены</a></li>
+                    <li><a href="#" data-goto=".contacts__toggle">Контакты</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="topline">
+            <div class="topline__logo">
+                <a href="/" class="logo-top"><img src="/assets/template/images/logo.png" alt=""></a>
+            </div>
+            <div class="topline__menu">
+                <ul class="topline__list">
+                    <li><a href="#" data-goto=".prices">Наши цены</a></li>
+                    <li><a href="#" data-goto=".contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="topline__contacts">
+                <div><a href="tel:88009999999" class="topline__phone">8 800 999 99 99</a></div>
+                <div><a href="mailto:info@domein.ru" class="topline__email">info@domain.ru</a></div>
+            </div>
+            <div class="topline__timework">
+                <div class="topline__time">с 9 до 22</div>
+                <div class="topline__hide">без выходных</div>
+            </div>
+            <div class="topline__button">
+                <a class="btn" href="#" data-goto=".promo__bottom">Заказать звонок</a>
+            </div>
+        </div>
+        <div class="promo">
+            <div class="promo__box">
+                <div class="promo__top">
+                    <div class="promo__caption">
+                        ЖБ фундамент для загородного дома
+                    </div>
+                    <ul class="promo__list">
+                        <li>За 1 день, с гарантией на 100 лет</li>
+                        <li>В любой грунт, в любое время года</li>
+                        <li>Свая от 3000 рублей, без предоплаты</li>
+                    </ul>
+                </div>
+                <div class="promo__bottom">
+                    <div class="promo__caption">Расчитать стоимость</div>
+                    <form class="promo__form" method="post">
+                        <div class="promo__left">
+                            <div class="promo__item">
+                                <input type="text" name="name" placeholder="Имя">
+                            </div>
+                            <div class="promo__item">
+                                <input type="text" name="name" placeholder="Телефон" data-mask="+7 (999) 999-99-99">
+                            </div>
+                        </div>
+                        <div class="promo__right">
+                            <label class="check-custom">
+                                <input type="hidden" name="iagree[]" value="">
+                                <input class="checkbox" name="iagree[]" type="checkbox" value="Согласен">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">
+                                    Даю согласие на обработку моих<span class="in-desktop"> персональных</span> данных
+                                </span>
+                            </label>
+                            <div class="promo__button">
+                                <a class="btn" href="#">Заказать звонок</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="advantages">
+    <div class="container">
+        <div class="advantages__caption caption-block">
+            <div class="caption__box">
+                <span class="caption__text">Преимущество железобетонных свай</span>
+                <span class="caption__border"></span>
+            </div>
+        </div>
+        <div class="advantages__box advantages-slider">
+            <div class="advantages__item">
+                <div class="advantages__header advantages__header--1">
+                    <img src="/assets/template/images/foundation.png" alt="">
+                </div>
+                <div class="advantages__name">
+                    Ленточный фундамент
+                </div>
+                <div class="advantages__body">
+                    <ul class="advantages__list">
+                        <li class="pink-dots">Фундамент возводится за 5-7 дней</li>
+                        <li class="pink-dots">Можно строить через 20 дней от заливки (по СНИП)</li>
+                        <li class="pink-dots">Максимальная нагрузка на основане 17 тон на м2 при глубине фудамента 1,6м</li>
+                        <li class="lightgreen-dots">Срок гарантированной эксплуатации - более 100 лет</li>
+                        <li class="pink-dots">Нельзя строить на участках с уклоном (требуется комбинация со сваями)</li>
+                        <li class="pink-dots">Необходимость проведения дополнительных работ по гидроизоляции</li>
+                        <li class="pink-dots">Стоимость возведения около 180 т.р. за фундамент 8х8 м</li>
+                    </ul>
+                </div>
+                <div class="advantages__footer">
+
+                </div>
+            </div>
+
+            <div class="advantages__item">
+                <div class="advantages__header advantages__header--2">
+                    <img src="/assets/template/images/piles-1.png" alt="">
+                </div>
+                <div class="advantages__name">
+                    Забивные ж/б сваи
+                </div>
+                <div class="advantages__body">
+                    <ul class="advantages__list">
+                        <li class="green-dots">Фундамент возводится за 1 день</li>
+                        <li class="green-dots">Можно строить в день возведения фундамент</li>
+                        <li class="green-dots">Максимальная нагрузка на одну сваю до 60 тонн (в зависимости от типа грунта)</li>
+                        <li class="green-dots">Срок гарантированной эксплуатации - более 100 лет</li>
+                        <li class="green-dots">Подходит для любых типов грунтов и рельефа местности</li>
+                        <li class="green-dots">Подходит для всех видов малоэтажного строительства</li>
+                        <li class="green-dots">Стоимость возведения около 110 т.р. за фундамент 8х8 м</li>
+                    </ul>
+
+                </div>
+                <div class="advantages__footer">
+
+                </div>
+            </div>
+
+            <div class="advantages__item">
+                <div class="advantages__header advantages__header--3">
+                    <img src="/assets/template/images/piles-2.png" alt="">
+                </div>
+                <div class="advantages__name">
+                    Винтовые сваи
+                </div>
+                <div class="advantages__body">
+                    <ul class="advantages__list">
+                        <li class="green-dots">Фундамент возводится за 1 день</li>
+                        <li class="red-dots">Фундамент требует усадки грунта из-за его разрыхления при завинчивании свай</li>
+                        <li class="red-dots">Максимальная нагрузка на одну сваю не более 3 тонн</li>
+                        <li class="red-dots">Требуется антикоррозийная обработка</li>
+                        <li class="red-dots">Срок гарантированной эксплуатации - не более 30 лет для свай выполненных по ГОСТу, иначе 10-15 лет</li>
+                        <li class="red-dots">Ограниченная  область применения фундамента</li>
+                        <li class="red-dots">Стоимость возведения около<br class="br__list"/>
+                            100 т.р. для свай не по ГОСТу и<br class="br__list"/>
+                            150 т.р. для свай по ГОСТу<br class="br__list"/>
+                            за фундамент 8х8м</li>
+                    </ul>
+
+                </div>
+                <div class="advantages__footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--           http://new.prizma-auto.ru/   -->
+
+<div class="application">
+    <div class="container">
+        <div class="application__caption caption-block">
+            <div class="caption__box">
+                <span class="caption__text">Где применяются?</span>
+                <span class="caption__border"></span>
+            </div>
+        </div>
+        <div class="application__list application-slider">
+            <div class="application__item">
+                <a href="#" class="application__card" style="background-image: url('/assets/template/images/primer-1.jpg');">
+                    <div class="application__info">
+                        <span>Железобетоные сваи для опорных стенок, причалов, берегоукреплений и пирсов</span>
+                    </div>
+                </a>
+                <div class="application__name">
+                    Для всех видов построек
+                </div>
+            </div>
+
+            <div class="application__item">
+                <a href="#" class="application__card" style="background-image: url('/assets/template/images/primer-2.jpg');">
+                    <div class="application__info">
+                        <span>Железобетоные сваи для опорных стенок, причалов, берегоукреплений и пирсов</span>
+                    </div>
+                </a>
+                <div class="application__name">
+                    Для домов до 4-х этажей
+                </div>
+            </div>
+
+            <div class="application__item">
+                <a href="#" class="application__card" style="background-image: url('/assets/template/images/primer-3.jpg');">
+                    <div class="application__info">
+                        <span>Для всех видов заборов</span>
+                    </div>
+                </a>
+                <div class="application__name">
+                    Для всех видов заборов
+                </div>
+            </div>
+
+            <div class="application__item">
+                <a href="#" class="application__card" style="background-image: url('/assets/template/images/primer-4.jpg');">
+                    <div class="application__info">
+                        <span>Для бань и гаражей </span>
+                    </div>
+                </a>
+                <div class="application__name">
+                    Для бань и гаражей
+                </div>
+            </div>
+
+            <div class="application__item">
+                <a href="#" class="application__card" style="background-image: url('/assets/template/images/primer-5.jpg');">
+                    <div class="application__info">
+                        <span>Железобетоные сваи для опорных стенок, причалов, берегоукреплений и пирсов</span>
+                    </div>
+                </a>
+                <div class="application__name">
+                    Для причалов и пирсов
+                </div>
+            </div>
+
+            <div class="application__item">
+                <a href="#" class="application__card" style="background-image: url('/assets/template/images/primer-6.jpg');">
+                    <div class="application__info">
+                        <span>Железобетоные сваи для опорных стенок, причалов, берегоукреплений и пирсов</span>
+                    </div>
+                </a>
+                <div class="application__name">
+                    Для частных домов
+                </div>
+            </div>
+
+            <div class="application__item">
+                <a href="#" class="application__card" style="background-image: url('/assets/template/images/primer-7.jpg');">
+                    <div class="application__info">
+                        <span>Для коммерческих сооружений</span>
+                    </div>
+                </a>
+                <div class="application__name">
+                    Для коммерческих сооружений
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="works__toggle toggle-caption" data-toggle=".works">
+    <div class="container">
+        <div class="toggle-caption__box">
+            Наши работы
+        </div>
+    </div>
+</div>
+<div class="works">
+    <div class="container">
+        <div class="works__caption caption-block">Наши работы</div>
+        <div class="works__body-">
+            <div class="works__list">
+                <div class="works__left">
+                    <div class="works__map" id="map">
+
+                    </div>
+                </div>
+                <div class="works__right">
+                    <div class="works__video">
+                        <iframe width="100%" height="208" src="https://www.youtube.com/embed/PBUfL3wrtMI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <!--a href="#">
+                            <img src="/assets/template/images/video.jpg" alt="">
+                        </a-->
+                    </div>
+                    <div class="works__name">
+                        Дом на 4 метровых ж/б сваях. Свайный
+                        фундамент + плита.
+                    </div>
+                    <div class="works__description">
+                        Коротенькое описание данного видеоролика, дающее понять о чем он.
+                    </div>
+                    <div class="works__links">
+                        <a target="_blank" href="https://www.youtube.com/channel/UC0ejK2AHEWPiVwpSoxr5ZQg/videos" class="works__link">Смореть все видео</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="why__toggle toggle-caption active" data-toggle=".why">
+    <div class="container">
+        <div class="toggle-caption__box">
+            Почему мы
+        </div>
+    </div>
+</div>
+<div class="why">
+    <div class="container">
+        <div class="why__caption caption-block">
+            <div class="caption__box">
+                <span class="caption__text">Почему мы</span>
+                <span class="caption__border"></span>
+            </div>
+        </div>
+        <div class="why__tabs">
+            <div class="why__tab-content xtab xtab-first">
+                <div class="why__list">
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/800x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/801x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/800x800">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/800x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/810x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/600x600">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="why__tab-content xtab active xtab-second">
+                <div class="why__list">
+                    <div class="why__image">
+                        <a data-fancybox="why" href="https://via.placeholder.com/800x1000">
+                            <img src="/assets/template/images/why-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why" href="https://via.placeholder.com/801x1000">
+                            <img src="/assets/template/images/why-2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why" href="https://via.placeholder.com/800x800">
+                            <img src="/assets/template/images/why-3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why" href="https://via.placeholder.com/800x1000">
+                            <img src="/assets/template/images/why-4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why" href="https://via.placeholder.com/810x1000">
+                            <img src="/assets/template/images/why-5.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why" href="https://via.placeholder.com/600x600">
+                            <img src="/assets/template/images/why-6.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="why__tab-content xtab xtab-third">
+                <div class="why__list">
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/800x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/801x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/800x800">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/800x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/810x1000">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                    <div class="why__image">
+                        <a data-fancybox="why-1" href="https://via.placeholder.com/600x600">
+                            <img src="https://via.placeholder.com/168x168" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xtab__nav">
+            <ul>
+                <li><a data-tab=".xtab-first" href="#">Свой склад</a></li>
+                <li><a data-tab=".xtab-second" href="#" class="active">Собственная техника и оборудование</a></li>
+                <li><a data-tab=".xtab-third" href="#">Опытные бригады</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="shema-work__toggle toggle-caption active" data-toggle=".shema-work">
+    <div class="container">
+        <div class="toggle-caption__box">
+            Как мы работаем
+        </div>
+    </div>
+</div>
+<div class="shema-work">
+    <div class="container">
+        <div class="shema-work__caption caption-block">
+            <div class="caption__box">
+                <span class="caption__text">Как мы работаем</span>
+                <span class="caption__border"></span>
+            </div>
+        </div>
+        <div class="shema-work__text">
+            Мы забиваем 30 свай<br class="in-mobile" /> за рабочий день
+        </div>
+        <div class="shema-work__list">
+            <div class="shema-work__row">
+                <div class="shema-work__item shema-work__item--left">
+                    <div class="shema-work__item-box">
+                        <div class="shema-work__name">
+                            Заявка
+                        </div>
+                        <div class="shema-work__info">
+                            Вы оставляете заявку или звоните по номеру
+                            8 800 999 99 99
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shema-work__row">
+                <div class="shema-work__item shema-work__item--right">
+                    <div class="shema-work__item-box">
+                        <div class="shema-work__name">
+                            Замер и расчет
+                        </div>
+                        <div class="shema-work__info">
+                            Оперативный выезд замерщика и расчет на
+                            месте
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shema-work__row">
+                <div class="shema-work__item shema-work__item--left">
+                    <div class="shema-work__item-box">
+                        <div class="shema-work__name">
+                            Согласование
+                        </div>
+                        <div class="shema-work__info">
+                            Согласовываем дату начала работ и
+                            документы
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shema-work__row">
+                <div class="shema-work__item shema-work__item--right">
+                    <div class="shema-work__item-box">
+                        <div class="shema-work__name">
+                            Монтаж
+                        </div>
+                        <div class="shema-work__info">
+                            Монтаж за 1 день с геодезистом
+                            (при необходимости)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="prices__toggle toggle-caption active" data-toggle=".prices">
+    <div class="container">
+        <div class="toggle-caption__box">
+            Наши цены
+        </div>
+    </div>
+</div>
+<div class="prices">
+    <div class="container">
+        <div class="prices__caption caption-block">
+            <div class="caption__box">
+                <span class="caption__text">Наши цены</span>
+                <span class="caption__border"></span>
+            </div>
+        </div>
+        <div class="prices__grid">
+            <div class="prices__box">
+                <table class="prices__table">
+                    <tr class="first alt">
+                        <td>150х150х2500</td>
+                        <td>150х150х3000</td>
+                        <td>150х150х4000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>до 50 км</td>
+                        <td>до 100 км</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>от 9 до 25</td>
+                        <td>5000</td>
+                        <td>5500</td>
+                    </tr>
+                    <tr>
+                        <td>от 26 до 50</td>
+                        <td>4500</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>от 51 до 100</td>
+                        <td>3000</td>
+                        <td>3700</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="grateful">
+                <div class="grateful__box grateful-slider">
+                    <div class="grateful__item">
+                        <a data-fancybox="gratefu" href="/assets/template/images/sertif-1.jpg"><img src="/assets/template/images/sertif-1.jpg" alt=""></a>
+                    </div>
+                    <div class="grateful__item">
+                        <a data-fancybox="gratefu" href="/assets/template/images/sertif-2.jpg"><img src="/assets/template/images/sertif-2.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="questions">
+    <div class="container">
+        <div class="questions__box">
+            <div class="questions__caption">
+                Остались вопросы? <span class="in-desktop">задайте их нашему инженеру</span>
+                <div class="in-mobile">Задайте их нашему инженеру</div>
+            </div>
+            <form action="">
+            <div class="questions__forma">
+                <div class="questions__left">
+                    <textarea placeholder="Ваш вопрос"></textarea>
+                </div>
+                <div class="questions__right">
+
+                    <div class="questions__grid">
+                        <div class="questions__item questions__item--phone">
+                            <input type="text" placeholder="Телефон" data-mask="+7(999) 999-99-99">
+                        </div>
+                        <div class="questions__item questions__item--submit">
+                            <button type="submit" class="btn">Задать вопрос</button>
+                        </div>
+                    </div>
+                    <div class="questions__agree">
+                        <label class="check-custom">
+                            <input type="hidden" name="iagree[]" value="">
+                            <input class="checkbox" name="iagree[]" type="checkbox" value="Согласен">
+                            <span class="checkbox-custom"></span>
+                            <span class="label">
+                                Даю согласие на обработку моих <span class="in-desktop">персональных</span> данных
+                                </span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="contacts__toggle toggle-caption" data-toggle=".contacts">
+    <div class="container">
+        <div class="toggle-caption__box">
+            Как с нами связаться
+        </div>
+    </div>
+</div>
+<div class="contacts">
+    <div class="container">
+        <div class="contacts__caption caption-block">
+            <div class="caption__box">
+                <span class="caption__text">Как с нами связаться</span>
+                <span class="caption__border"></span>
+            </div>
+        </div>
+        <div class="contacts__list">
+            <div class="contacts__item contacts__item--1">
+                <div class="contacts__name">
+                    Адрес
+                </div>
+                <div class="contacts__value">
+                    Санкт-Петербург,
+                    Аптекарская набережная, 20
+                </div>
+            </div>
+
+            <div class="contacts__item contacts__item--2">
+                <div class="contacts__name">
+                    Режим работы
+                </div>
+                <div class="contacts__value">
+                    с 9:00 до 22:00 <br />
+                    без выходных
+                </div>
+            </div>
+
+            <div class="contacts__item contacts__item--3">
+                <div class="contacts__name">
+                    Телефон
+                </div>
+                <div class="contacts__value">
+                    8 800 999 99 99
+                </div>
+                <a href="#" class="contacts__phone">Заказать звонок</a>
+            </div>
+
+            <div class="contacts__item contacts__item--4">
+                <div class="contacts__name">
+                    Эл. почта
+                </div>
+                <div class="contacts__value">
+                    info@domain.ru
+                </div>
+            </div>
+        </div>
+
+        <div class="contacts__map">
+            <div id="map-contacts"></div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer__list">
+            <div class="footer__copyright">2018 © Сваймастер5000</div>
+            <div class="footer__politic">
+                <a href="#">Политика конфидициальности</a>
+            </div>
+            <div class="footer__develop">Разработка сайта -
+                <a href="#">Creative Lab</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="assets/template/vendor/slick/slick.js"></script>
+<script src="assets/template/vendor/magnific-popup/magnific-popup.js"></script>
+<script src="assets/template/vendor/jquery.inputmask.bundle.js"></script>
+<script src="assets/template/vendor/fancybox/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/assets/template/vendor/selectric/selectric.css" />
+<script src="/assets/template/vendor/selectric/jquery.selectric.min.js"></script>
+<script src="assets/template/js/scripts.js"></script>
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    var places = [
+        {"coords": [59.978246, 30.315464], "image": "/assets/template/images/tmp/onmap-1.jpg", "descr": "г. Санкт-Петербург, ул. Большая прохоровская, 27"},
+        {"coords": [59.977966, 30.309638], "image": "/assets/template/images/tmp/onmap-2.jpg", "descr": "г. Санкт-Петербург, ул. Мира, 12"},
+        {"coords": [59.974354, 30.317599], "image": "/assets/template/images/tmp/onmap-1.jpg", "descr": "г. Санкт-Петербург, ул. Мира, 12"}
+    ];
+</script>
+<script>
+    ymaps.ready(init);
+    function init() {
+        createMap({center:[59.978246, 30.315464], zoom:16, controls:[], scroll: false}, places);
+    }
+
+    function createMap(state, places) {
+        // Если карта еще не была создана, то создадим ее и добавим метку с адресом.
+        //alert(state.toSource());
+
+        map = new ymaps.Map('map', state);
+
+
+        MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+            '<div class="popover top">' +
+            '<div class="arrow"></div>' +
+            '<div class="popover__inner">' +
+            '$[[options.contentLayout observeSize minWidth=235 maxWidth=235 maxHeight=350]]' +
+            '</div></div>' +
+            '</div>', {
+                /**
+                 * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
+                 * @function
+                 * @name build
+                 */
+                build: function () {
+                    this.constructor.superclass.build.call(this);
+                    this._$element = $('.popover', this.getParentElement());
+                    this.applyElementOffset();
+                    this._$element.find('.close')
+                        .on('click', $.proxy(this.onCloseClick, this));
+                },
+
+                /**
+                 * Удаляет содержимое макета из DOM.
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
+                 * @function
+                 * @name clear
+                 */
+                clear: function () {
+                    this._$element.find('.close')
+                        .off('click');
+
+                    this.constructor.superclass.clear.call(this);
+                },
+
+                /**
+                 * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                 * @function
+                 * @name onSublayoutSizeChange
+                 */
+                onSublayoutSizeChange: function () {
+                    MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+
+                    if(!this._isElement(this._$element)) {
+                        return;
+                    }
+
+                    this.applyElementOffset();
+
+                    this.events.fire('shapechange');
+                },
+
+                /**
+                 * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                 * @function
+                 * @name applyElementOffset
+                 */
+                applyElementOffset: function () {
+                    this._$element.css({
+                        left: -(this._$element[0].offsetWidth / 2),
+                        bottom: 20
+                    });
+                },
+
+                /**
+                 * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+                 * @function
+                 * @name onCloseClick
+                 */
+                onCloseClick: function (e) {
+                    e.preventDefault();
+
+                    this.events.fire('userclose');
+                },
+
+                /**
+                 * Используется для автопозиционирования (balloonAutoPan).
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
+                 * @function
+                 * @name getClientBounds
+                 * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
+                 */
+                getShape: function () {
+                    if(!this._isElement(this._$element)) {
+                        return MyBalloonLayout.superclass.getShape.call(this);
+                    }
+
+                    var position = this._$element.position();
+
+                    return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+                        [position.left, position.top], [
+                            position.left + this._$element[0].offsetWidth,
+                            position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+                        ]
+                    ]));
+                },
+
+                /**
+                 * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
+                 * @function
+                 * @private
+                 * @name _isElement
+                 * @param {jQuery} [element] Элемент.
+                 * @returns {Boolean} Флаг наличия.
+                 */
+                _isElement: function (element) {
+                    return element && element[0] && element.find('.arrow')[0];
+                }
+            }),
+
+            // Создание вложенного макета содержимого балуна.
+            MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div class="popover__image"><img src="$[properties.balloonImage]"></div>' +
+                '<div class="popover__descr">$[properties.balloonContent]</div>'
+            );
+
+
+            for (index = 0, len = places.length; index < len; ++index) {
+                item = places[index];
+                placemark = new ymaps.Placemark(
+                    item.coords, {
+                        balloonImage: item.image,
+                        balloonContent: item.descr
+                    }, {
+                        balloonShadow: false,
+                        balloonLayout: MyBalloonLayout,
+                        balloonContentLayout: MyBalloonContentLayout,
+                        balloonPanelMaxMapArea: 0,
+                        hideIconOnBalloonOpen: false,
+
+                        iconLayout: 'default#image',
+                        // Своё изображение иконки метки.
+                        iconImageHref: '/assets/template/images/marker.png',
+                        // Размеры метки.
+                        iconImageSize: [41, 46],
+                        // Смещение левого верхнего угла иконки относительно
+                        // её "ножки" (точки привязки).
+                        iconImageOffset: [-21, -36],
+                        pane: 'balloon'
+                    });
+                map.geoObjects.add(placemark);
+                map.behaviors.disable('drag');
+
+
+            }
+
+        if ($(window).width()<1000) {
+            map.setBounds(map.geoObjects.getBounds(), {checkZoomRange:true}).then(function(){
+                if(map.getZoom() == 0) map.setZoom(14); // Если значение zoom превышает 15, то устанавливаем 15.
+            });
+        } else {
+            map.setBounds(map.geoObjects.getBounds(), {checkZoomRange:true, zoomMargin:50});
+        }
+
+        map.behaviors.disable('scrollZoom');
+        //map.controls.add('zoomControl');
+        // Если карта есть, то выставляем новый центр карты и меняем данные и позицию метки в соответствии с найденным адресом.
+
+    }
+</script>
+
+<script>
+    //ymaps.ready(initContacts);
+    function initContacts() {
+        createMapContacts({center:[59.978246, 30.315464], zoom:16, controls:[], scroll: false}, '');
+    }
+
+    function createMapContacts(state, caption) {
+        // Если карта еще не была создана, то создадим ее и добавим метку с адресом.
+        //alert(state.toSource());
+
+        map_contacts = new ymaps.Map('map-contacts', state);
+        placemark = new ymaps.Placemark(
+            map_contacts.getCenter(), {
+                iconCaption: caption,
+                balloonContent: caption
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '/assets/template/images/marker.png',
+                iconImageSize: [41, 46],
+                iconImageOffset: [-21, -36]
+            });
+        map_contacts.geoObjects.add(placemark);
+        map_contacts.behaviors.disable('scrollZoom');
+        // Если карта есть, то выставляем новый центр карты и меняем данные и позицию метки в соответствии с найденным адресом.
+
+    }
+</script>
+
+
+
+</body>
+</html>
