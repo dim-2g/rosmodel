@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,700|Play:700&amp;subset=cyrillic" rel="stylesheet">
+
+    <!-- @if NODE_ENV='development' -->
+    <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/assets/template/css/main.css">
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="assets/template/css/main.min.css">
+    <!-- @endif -->
+</head>
+<body>
+
+
+<div class="topline-mobile">
+    <div class="topline-mobile__burger toggle-menu"><span></span></div>
+    <div class="topline-mobile__logo">
+        <a href="/" class=""><img src="/assets/template/images/logo.png" alt=""></a>
+    </div>
+    <a href="#" class="topline-mobile__cart"></a>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#">О мастерской</a></li>
+            <li><a href="#">Купить макет</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Макеты на заказ</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="mobile-menu__bottom">
+            <div class="mobile-menu__contacts">
+                <a href="tel:+74953692199" class="mobile-menu__phone">+7 (495) 369-21-99</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="header">
+    <div class="container">
+        <div class="header__grid">
+            <div class="header__logo">
+                <a href="/"><img src="/assets/template/images/logo.png" alt=""></a>
+            </div>
+            <div class="header__menu">
+                <ul class="topmenu">
+                    <li><a href="#">О мастерской</a></li>
+                    <li><a href="#">Купить макет</a>
+                        <ul>
+                            <li class="topmenu__item topmenu__item--1"><a href="#"><span>Архитектурные макеты</span></a></li>
+                            <li class="topmenu__item topmenu__item--3"><a href="#"><span>Макеты стадионов</span></a></li>
+                            <li class="topmenu__item topmenu__item--5"><a href="#"><span>Градостроительные макеты</span></a></li>
+                            <li class="topmenu__item topmenu__item--7"><a href="#"><span>Макеты интерьеров</span></a></li>
+                            <li class="topmenu__item topmenu__item--2"><a href="#"><span>Здания и жилые комплексы</span></a></li>
+                            <li class="topmenu__item topmenu__item--4"><a href="#"><span>Сувениры, подарки</span></a></li>
+                            <li class="topmenu__item topmenu__item--6"><a href="#"><span>Промышленные макеты</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Макеты на заказ</a></li>
+                    <li><a href="#">Галерея</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="header__cart">
+
+                <div id="msMiniCart" class="mini-cart">
+                    <a href="#order" class="mini-cart__link">
+                        <span class="mini-cart__icon"><span class="ms2_total_count mini-cart__total">1</span></span>
+                    </a>
+
+                    <div class="cart-items mini-cart__items">
+                        <ul id="mc-dynamic">
+
+                        </ul>
+                        <a class="xbtn" href="order">Оформить заказ</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header__contacts">
+                <div class="header__phone">
+                    <a href="#">+7 (495) 369-21-99</a>
+                </div>
+                <div class="header__feedback">
+                    <a href="#">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,700|Play:700&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/assets/template/css/main.css">
+
+</head>
+<body>
+
+
+<div class="topline-mobile">
+    <div class="topline-mobile__burger toggle-menu"><span></span></div>
+    <div class="topline-mobile__logo">
+        <a href="/" class=""><img src="/assets/template/images/logo.png" alt=""></a>
+    </div>
+    <a href="#" class="topline-mobile__cart"></a>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#">О мастерской</a></li>
+            <li><a href="#">Купить макет</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Макеты на заказ</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="mobile-menu__bottom">
+            <div class="mobile-menu__contacts">
+                <a href="tel:+74953692199" class="mobile-menu__phone">+7 (495) 369-21-99</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="header">
+    <div class="container">
+        <div class="header__grid">
+            <div class="header__logo">
+                <a href="/"><img src="/assets/template/images/logo.png" alt=""></a>
+            </div>
+            <div class="header__menu">
+                <ul class="topmenu">
+                    <li><a href="#">О мастерской</a></li>
+                    <li><a href="#">Купить макет</a>
+                        <ul>
+                            <li class="topmenu__item topmenu__item--1"><a href="#"><span>Архитектурные макеты</span></a></li>
+                            <li class="topmenu__item topmenu__item--3"><a href="#"><span>Макеты стадионов</span></a></li>
+                            <li class="topmenu__item topmenu__item--5"><a href="#"><span>Градостроительные макеты</span></a></li>
+                            <li class="topmenu__item topmenu__item--7"><a href="#"><span>Макеты интерьеров</span></a></li>
+                            <li class="topmenu__item topmenu__item--2"><a href="#"><span>Здания и жилые комплексы</span></a></li>
+                            <li class="topmenu__item topmenu__item--4"><a href="#"><span>Сувениры, подарки</span></a></li>
+                            <li class="topmenu__item topmenu__item--6"><a href="#"><span>Промышленные макеты</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Макеты на заказ</a></li>
+                    <li><a href="#">Галерея</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="header__cart">
+
+                <div id="msMiniCart" class="mini-cart">
+                    <a href="#order" class="mini-cart__link">
+                        <span class="mini-cart__icon"><span class="ms2_total_count mini-cart__total">1</span></span>
+                    </a>
+
+                    <div class="cart-items mini-cart__items">
+                        <ul id="mc-dynamic">
+
+                        </ul>
+                        <a class="xbtn" href="order">Оформить заказ</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header__contacts">
+                <div class="header__phone">
+                    <a href="#">+7 (495) 369-21-99</a>
+                </div>
+                <div class="header__feedback">
+                    <a href="#">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="padding-header"></div>
+
+<div class="crumbs">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li class="active">Отзывы</li>
+        </ul>
+    </div>
+</div>
+
+<div class="reviews">
+    <div class="container">
+        <div class="reviews__border">
+            <div class="reviews__caption caption-block">
+                <span class="caption-block__text">Отзывы о нас</span>
+            </div>
+            <div class="review-form">
+                <div class="review-form__overlay">
+                    <div class="review-form__caption">
+                        Поделитесь впечатлением о работах и сервисе
+                    </div>
+                    <form action="">
+                        <div class="review-form__list">
+                            <div class="review-form__inputs">
+                                <div class="review-form__input-box">
+                                    <input type="text" placeholder="Имя, фамилия" name="name">
+                                </div>
+                                <div class="review-form__input-box">
+                                    <input type="text" placeholder="E-mail (не публикуется)" name="email">
+                                </div>
+                            </div>
+                            <div class="review-form__message">
+                                <textarea name="comment" id="" placeholder="Расскажите о вашем  опыте работы с нами"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="review-form__attach">
+                            <label for="review-form_file">
+                                Прикрепить файл
+                                <input id="review-form_file" name="file" type="file">
+                                <div id="review-form_filename"></div>
+                            </label>
+                        </div>
+
+                        <div class="review-form__bottom">
+                            <label class="check-custom">
+                                <input type="hidden" name="iagree[]" value="0">
+                                <input class="checkbox" name="iagree" type="checkbox" value="Согласен">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">
+                                    Даю согласие на обработку моих персональных данных
+                                    </span>
+                            </label>
+
+                            <button type="submit" class="btn">Получить предложение</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-page">
+            <div class="reviews-page__border">
+                <div class="reviews-page__list">
+                    <div class="reviews-page__box">
+                        <div class="reviews-page__item">
+                            <div class="reviews-page__image">
+                                <img src="/assets/template/images/thanks.jpg" alt="">
+                            </div>
+                            <div class="reviews-page__info">
+                                <div class="reviews-page__name">
+                                    АО «Московская кольцевая
+                                    железная дорога
+                                </div>
+                                <div class="reviews-page__data">
+                                    2018
+                                </div>
+                                <div class="reviews-page__text">
+                                    По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-page__box">
+                        <div class="reviews-page__item">
+                            <div class="reviews-page__image">
+                                <img src="/assets/template/images/thanks.jpg" alt="">
+                            </div>
+                            <div class="reviews-page__info">
+                                <div class="reviews-page__name">
+                                    Оператор сотовой связи
+                                    «Билайн»
+                                </div>
+                                <div class="reviews-page__data">
+                                    2018
+                                </div>
+                                <div class="reviews-page__text">
+                                    По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-page__box">
+                        <div class="reviews-page__item">
+                            <div class="reviews-page__image">
+                                <img src="/assets/template/images/thanks.jpg" alt="">
+                            </div>
+                            <div class="reviews-page__info">
+                                <div class="reviews-page__name">
+                                    Проектный институт<br />
+                                    «Арена»
+                                </div>
+                                <div class="reviews-page__data">
+                                    2018
+                                </div>
+                                <div class="reviews-page__text">
+                                    По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-page__box">
+                        <div class="reviews-page__item">
+                            <div class="reviews-page__image">
+                                <img src="/assets/template/images/thanks.jpg" alt="">
+                            </div>
+                            <div class="reviews-page__info">
+                                <div class="reviews-page__name">
+                                    Мы продаем холодильники
+                                    «Самсунг»
+                                </div>
+                                <div class="reviews-page__data">
+                                    2018
+                                </div>
+                                <div class="reviews-page__text">
+                                    По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-page__box">
+                        <div class="reviews-page__item">
+                            <div class="reviews-page__image">
+                                <img src="/assets/template/images/thanks.jpg" alt="">
+                            </div>
+                            <div class="reviews-page__info">
+                                <div class="reviews-page__name">
+                                    Частное охранное предприятие
+                                    «Володя и Ко»
+                                </div>
+                                <div class="reviews-page__data">
+                                    2018
+                                </div>
+                                <div class="reviews-page__text">
+                                    По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-page__box">
+                        <div class="reviews-page__item">
+                            <div class="reviews-page__image">
+                                <img src="/assets/template/images/thanks.jpg" alt="">
+                            </div>
+                            <div class="reviews-page__info">
+                                <div class="reviews-page__name">
+                                    Проектный институт <br />
+                                    «Арена»
+                                </div>
+                                <div class="reviews-page__data">
+                                    2018
+                                </div>
+                                <div class="reviews-page__text">
+                                    По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-page__goto">
+                    <a href="#" class="reviews-page__goto-link">Показать еще</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top__grid">
+                <div class="footer-top__logo">
+                    <img src="/assets/template/images/logo-footer.png" alt="">
+                </div>
+                <div class="footer-top__item footer-top__item--video">
+                    <a href="#" class="btn btn--video">Видео наших работ</a>
+                </div>
+                <div class="footer-top__item footer-top__item--brief">
+                    <a href="#" class="btn btn--brief">Скачать бриф на макет</a>
+                </div>
+                <div class="footer-top__item footer-top__item--presenttation">
+                    <a href="#" class="btn btn--presentation">Посмотреть презентацию</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__grid">
+                <div class="footer-bottom__copyright">
+                    2018 © Макетная мастерская "Росмодель"
+                </div>
+                <div class="footer-bottom__politic">
+                    <a href="#">Политика конфидициальности</a>
+                </div>
+                <div class="footer-bottom__develop">Разработка сайта -
+                    <a href="#">Creative Lab</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="assets/template/vendor/jquery-3.2.1.min.js"></script>
+<script src="assets/template/vendor/slick/slick.js"></script>
+<script src="assets/template/vendor/jquery.inputmask.bundle.js"></script>
+<script src="assets/template/vendor/fancybox/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css">
+<script src="assets/template/js/scripts.js"></script>
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    var mapData = {
+      coords: [55.789335, 37.703478],
+      header: 'Электрозаводская улица, 21',
+      center: [55.789335, 37.703478],
+        zoom: 14,
+    };
+</script>
+<script src="/assets/template/js/map.js"></script>
+
+
+
+</body>
+</html>
