@@ -1,11 +1,14 @@
 .catalog-page{
-  padding-bottom: 40px;
+  @media($bp-larger-than-desktop) {
+    padding-bottom: 40px;
+  }
   &__border{
     position: relative;
-    padding-bottom: 34px;
+    @media($bp-larger-than-desktop) {
+      padding-bottom: 34px;
+    }
     &:before{
-      content: "";
-      display: inline-block;
+      display: none;
       position: absolute;
       top: 17px;
       bottom: 5px;
@@ -16,6 +19,10 @@
       z-index: 1;
       width: 1020px;
       transform: translateX(-50%);
+      @media($bp-larger-than-desktop) {
+        content: "";
+        display: inline-block;
+      }
     }
     > div{
       position: relative;
@@ -24,10 +31,13 @@
   }
 }
 .maket-block{
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin-right: -10px;
   margin-left: -10px;
+  @media($bp-larger-than-tablet) {
+    display: flex;
+  }
   &__item{
     padding-left: 10px;
     padding-right: 10px;
@@ -181,6 +191,10 @@
   margin-bottom: 20px;
   border: 1px solid $border-color;
   border-radius: 3px;
+  display: block;
+  @media($bp-larger-than-tablet) {
+    display: none;
+  }
   &__list{
     list-style-type: none;
     margin: 0;
@@ -198,7 +212,7 @@
   }
   &__caption{
     a{
-      padding: 10px 25px 10px 35px;
+      padding: 10px 25px 10px 50px;
       position: relative;
       &:after{
         content: "\f107";
