@@ -112,6 +112,8 @@
         <div class="cart-thank__border">
             <div class="cart-thank__caption caption-block">
                 <h1 class="caption-block__text">Спасибо</h1>
+            </div>
+            <div class="cart-thank__box">
                 <div class="cart-thank__order-number">
                     Ваш заказ №778 успешно оформлен
                 </div>
@@ -136,9 +138,10 @@
                 </div>
                 <div class="cart-thank__order-cost">Итого к оплате: 27000 <span class="rub"></span></div>
             </div>
-
-
         </div>
+
+
+
         <div class="cart-dostavka">
             <div class="cart-dostavka__border">
                 <div class="cart-dostavka__list">
@@ -167,7 +170,114 @@
                     </div>
                 </div>
 
+
             </div>
         </div>
     </div>
 </div>
+
+
+<div style="display: none;">
+    <div id="affeedback" class="form-callback xform ajax_form af_feedback">
+        <div class="xform__caption">Пишите! Ответим на все вопросы</div>
+        <form action="">
+            <div class="xform__grid">
+                <div class="xform__left">
+                    <div class="xform__group">
+                        <div class="xform__item">
+                            <input type="text" name="name" placeholder="Имя*">
+                        </div>
+                    </div>
+                    <div class="xform__group">
+                        <div class="xform__item">
+                            <input type="text" name="name" placeholder="Email*">
+                        </div>
+                    </div>
+                </div>
+                <div class="xform__right">
+                    <div class="xform__group">
+                        <div class="xform__item">
+                            <textarea name="message" id="" placeholder="Сообщение"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xform__agree">
+                <label class="check-custom">
+                    <input type="hidden" name="iagree[]" value="0">
+                    <input class="checkbox" name="iagree" type="checkbox" value="Согласен">
+                    <span class="checkbox-custom"></span>
+                    <span class="label">
+                        Согласие на обработку личных данных
+                    </span>
+                </label>
+            </div>
+            <div class="xform__submit">
+                <div class="btn">Отправить</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top__grid">
+                <div class="footer-top__logo">
+                    <img src="/assets/template/images/logo-footer.png" alt="">
+                </div>
+                <div class="footer-top__item footer-top__item--video">
+                    <a href="#" class="btn btn--video">Видео наших работ</a>
+                </div>
+                <div class="footer-top__item footer-top__item--brief">
+                    <a href="#" class="btn btn--brief">Скачать бриф на макет</a>
+                </div>
+                <div class="footer-top__item footer-top__item--presenttation">
+                    <a href="#" class="btn btn--presentation">Посмотреть презентацию</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__grid">
+                <div class="footer-bottom__copyright">
+                    2018 © Макетная мастерская "Росмодель"
+                </div>
+                <div class="footer-bottom__politic">
+                    <a href="#">Политика конфидициальности</a>
+                </div>
+                <div class="footer-bottom__develop">Разработка сайта -
+                    <a href="#">Creative Lab</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="assets/template/vendor/jquery-3.2.1.min.js"></script>
+<script src="assets/template/vendor/slick/slick.js"></script>
+<script src="assets/template/vendor/jquery.inputmask.bundle.js"></script>
+<script src="assets/template/vendor/fancybox/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css">
+<script src="assets/template/js/scripts.js"></script>
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    var mapData = {
+      coords: [55.789335, 37.703478],
+      header: 'Электрозаводская улица, 21',
+      center: [55.789335, 37.703478],
+        zoom: 14,
+    };
+</script>
+<script src="/assets/template/js/map.js"></script>
+
+
+
+</body>
+</html>
