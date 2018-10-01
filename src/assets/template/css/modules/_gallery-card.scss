@@ -1,11 +1,12 @@
 .gallery-card{
   &__border{
     position: relative;
-    padding-bottom: 36px;
-    margin-bottom: 40px;
+    @media($bp-larger-than-desktophd){
+      padding-bottom: 36px;
+      margin-bottom: 40px;
+    }
     &:before{
-      content: "";
-      display: inline-block;
+      display: none;
       position: absolute;
       top: 17px;
       bottom: 5px;
@@ -17,6 +18,10 @@
       max-width: 1024px;
       width: 100%;
       transform: translateX(-50%);
+      @media($bp-larger-than-desktophd){
+        content: "";
+        display: inline-block;
+      }
     }
     > div{
       position: relative;
@@ -25,24 +30,49 @@
   }
   &__box{
     display: flex;
-    border: 1px solid $border-color;
-    border-radius: 5px;
     background-color: #fff;
-    padding: 30px;
     justify-content: space-between;
+    flex-direction: column;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    @media($bp-larger-than-desktop){
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      padding: 30px;
+      flex-direction: row;
+    }
   }
   &__info{
-    padding-right: 15px;
+    order: 1;
+    @media($bp-larger-than-desktop) {
+      padding-right: 15px;
+      order: 0;
+    }
   }
   &__images{
-    width: 537px;
-    padding-left: 15px;
+    order: 0;
+    @media($bp-larger-than-desktop) {
+      order: 1;
+      width: 450px;
+    }
+    @media($bp-larger-than-desktophd){
+      width: 537px;
+      padding-left: 15px;
+    }
   }
   &__name{
     font-weight: $font-weight-bold;
     font-size: 20px;
     margin-bottom: 20px;
     color: #666666;
+    display: none;
+    @media($bp-larger-than-desktop){
+      display: block;
+    }
   }
 
   &__image{
@@ -58,11 +88,108 @@
   }
   &__main-images{
     margin-bottom: 20px;
+    &.slick-dotted.slick-slider{
+      margin-bottom: 47px;
+      @media($bp-larger-than-desktop){
+        margin-bottom: 20px;
+      }
+    }
+    .slick-dots{
+      &__wrapper{
+        position: absolute;
+        bottom: -30px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        .slick-dots{
+          position: relative;
+          bottom: auto;
+          display: inline-block;
+          width: auto;
+          line-height: 10px;
+          vertical-align: middle;
+        }
+        .slick-dots-prev{
+          //border: 1px red solid;
+          //width: 12px;
+          height: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          cursor: pointer;
+          margin-right: 4px;
+          line-height: 10px;
+          &:before{
+            display: inline-block;
+            content: "";
+            @include sprite($arrow-slider);
+            transform: rotate(180deg);
+          }
+        }
+        .slick-dots-next{
+          //border: 1px red solid;
+          //width: 12px;
+          height: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          cursor: pointer;
+          margin-left: 4px;
+          line-height: 10px;
+          &:before{
+            display: inline-block;
+            content: "";
+            @include sprite($arrow-slider);
+          }
+        }
+      }
+      li {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+        vertical-align: middle;
+        @media($bp-larger-than-desktop){
+          width: 15px;
+          height: 15px;
+          margin: 0 2px;
+        }
+        button{
+          width: 10px;
+          height: 10px;
+          @media($bp-larger-than-desktop){
+            width: 15px;
+            height: 15px;
+          }
+        }
+        &.slick-active button::before {
+          background-color: $gold;
+        }
+      }
+      button::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        background-color: $border-color;
+        opacity: 1;
+        @media($bp-larger-than-desktop){
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
   }
   &__previews{
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: 20px;
+    display: none;
+    @media($bp-larger-than-desktop){
+      display: block;
+    }
   }
   &__preview{
     display: inline-block;
@@ -77,25 +204,42 @@
   }
 
   &__neighbors{
-    display: flex;
     margin-left: -10px;
     margin-right: -10px;
+    display: none;
+    @media($bp-larger-than-desktop){
+      display: flex;
+    }
+    &--mobile{
+      display: block;
+      @media($bp-larger-than-desktop){
+        display: none;
+      }
+    }
   }
   &__link-prev{
     padding: 0 10px;
     display: inline-block;
     width: 100%;
+    margin-bottom: 15px;
+    @media($bp-larger-than-desktop){
+      margin-bottom: 0;
+    }
     a{
       display: flex;
       border: 1px solid $border-color;
-      font-size: 15px;
+      font-size: 14px;
       text-decoration: none;
-      height: 80px;
+      height: 70px;
       align-items: center;
       text-align: right;
       padding: 5px 18px 5px 56px;
       position: relative;
       border-radius: 4px;
+      @media($bp-larger-than-desktop){
+        height: 80px;
+        font-size: 15px;
+      }
       &:before{
         display: inline-block;
         content: "";
@@ -115,17 +259,24 @@
     padding: 0 10px;
     display: inline-block;
     width: 100%;
+    @media($bp-larger-than-desktop){
+      margin-bottom: 0;
+    }
     a{
       display: flex;
       border: 1px solid $border-color;
-      font-size: 15px;
+      font-size: 14px;
       text-decoration: none;
-      height: 80px;
+      height: 70px;
       align-items: center;
       text-align: left;
       padding: 5px 56px 5px 18px;
       position: relative;
       border-radius: 4px;
+      @media($bp-larger-than-desktop){
+        font-size: 15px;
+        height: 80px;
+      }
       &:before{
         display: inline-block;
         content: "";
@@ -148,14 +299,25 @@
     margin-bottom: 24px;
   }
   &__row{
-    display: flex;
-    margin-bottom: 12px;
+    @media($bp-larger-than-desktop){
+      display: flex;
+      margin-bottom: 12px;
+    }
   }
   &__name{
-    max-width: 266px;
     width: 100%;
-    flex-shrink: 0;
-    display: flex;
+    background-color: $border-color;
+    text-align: center;
+    padding: 6px 3px 7px;
+    @media($bp-larger-than-desktop) {
+      background-color: #fff;
+      padding: 0;
+      text-align: left;
+      max-width: 266px;
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+    }
     &:after{
       display: inline-block;
       content: "";
@@ -167,7 +329,12 @@
     }
   }
   &__value{
-
+    padding: 6px 3px 7px;
+    text-align: center;
+    @media($bp-larger-than-desktop) {
+      text-align: left;
+      padding: 0;
+    }
   }
   &__link{
     margin-bottom: 10px;
@@ -177,21 +344,45 @@
 }
 
 .gallery-description{
-  padding-bottom: 15px;
+  padding-bottom: 5px;
+  @media($bp-larger-than-desktop) {
+    padding-bottom: 15px;
+  }
   &__caption{
-    font-size: 20px;
+    font-size: 16px;
     color: #666666;
     font-weight: $font-weight-bold;
+    @media($bp-larger-than-desktop) {
+      font-size: 20px;
+    }
+  }
+  p{
+    line-height: 145%;
+    margin: 10px 0;
+    @media($bp-larger-than-desktop) {
+      margin: 16px 0;
+      line-height: 150%;
+    }
   }
 }
 .gallery-share{
   border-top: 1px solid $border-color;
-  padding-top: 30px;
+  padding-top: 18px;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  @media($bp-larger-than-desktop){
+    margin-bottom: 0;
+  }
+  @media($bp-larger-than-desktop) {
+    padding-top: 30px;
+  }
   &__info{
     width: 100px;
-    font-size: 15px;
+    font-size: 14px;
+    @media($bp-larger-than-desktop) {
+      font-size: 15px;
+    }
   }
   a{
     font-size: 0;
@@ -209,15 +400,19 @@
 
 
 .viewed-product {
-  padding-bottom: 25px;
+  padding-bottom: 3px;
   margin-bottom: 10px;
   margin-top: 12px;
+  @media($bp-larger-than-desktop) {
+    padding-bottom: 25px;
+  }
   &__border {
     position: relative;
-    padding-bottom: 4px;
+    @media($bp-larger-than-desktop) {
+      padding-bottom: 4px;
+    }
     &:before {
-      content: "";
-      display: inline-block;
+      display: none;
       position: absolute;
       top: 17px;
       bottom: 5px;
@@ -229,6 +424,10 @@
       max-width: 900px;
       width: 100%;
       transform: translateX(-50%);
+      @media($bp-larger-than-desktop) {
+        content: "";
+        display: inline-block;
+      }
     }
     > div {
       position: relative;

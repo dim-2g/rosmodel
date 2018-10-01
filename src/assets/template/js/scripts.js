@@ -70,6 +70,7 @@ $(function() {
     initWorkshopGallerySlider('.workshop-gallery-slider');
     initWorkshopMastersSlider();
     initSimilarProductSlider();
+    initViewedProductSlider();
 
 
     $(document).on('change','#brief-form_file',function(){
@@ -132,7 +133,26 @@ initGalleryCardSlider = function() {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.gallery-card__previews'
+        asNavFor: '.gallery-card__previews',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    dots: true,
+                }
+            }
+        ]
+    });
+    var selector = '.gallery-card__main-images';
+    setArrows(selector);
+    $(selector).on('breakpoint', function(event, slick, direction){
+        setArrows(selector);
     });
     $('.gallery-card__previews').slick({
         slidesToShow: 4,
@@ -270,6 +290,54 @@ initSimilarProductSlider = function() {
         if (similar_product_slider) {
             $(selector).slick('unslick');
             similar_product_slider = false;
+        }
+    }
+};
+
+var viewed_product_slider = false;
+initViewedProductSlider = function() {
+    var selector = '.viewed-product-slider';
+    if ($(window).width()<1050) {
+        if (!viewed_product_slider) {
+            $(selector).slick({
+                'autoplay': false,
+                'arrows': false,
+                'dots': true,
+                'slidesToShow': 3,
+                'slidesToScroll': 1,
+                'initialSlide': 1,
+                'infinite': false,
+                'adaptiveHeight': true,
+                'responsive': [
+                    {
+                        breakpoint: 1000,
+                        settings: {
+                            vertical: false,
+                            dots: true,
+                            slidesToShow:2
+                        }
+                    },
+                    {
+                        breakpoint: 750,
+                        settings: {
+                            vertical: false,
+                            dots: true,
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+            setArrows(selector);
+            $(selector).on('breakpoint', function(event, slick, direction){
+                setArrows(selector);
+            });
+
+            viewed_product_slider = true;
+        }
+    } else {
+        if (viewed_product_slider) {
+            $(selector).slick('unslick');
+            viewed_product_slider = false;
         }
     }
 };

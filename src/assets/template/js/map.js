@@ -7,7 +7,7 @@ ymaps.ready(init);
 hideMapOnMobile = function() {
     if ($(window).width()<750) {
         setTimeout(function() {
-            $('#map').slideUp();
+            $('#map.hidden').slideUp();
         }, 7000);
     }
 };

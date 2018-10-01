@@ -36,7 +36,7 @@
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
-    @media($bp-larger-than-tablet){
+    @media($bp-larger-than-desktop){
       margin-left: 0;
       margin-right: 0;
       max-width: none;
@@ -49,7 +49,7 @@
     }
   }
   &__images{
-    @media($bp-larger-than-tablet){
+    @media($bp-larger-than-desktop){
       width: 400px;
       flex-shrink: 0;
       display: flex;
@@ -453,6 +453,105 @@
 
 
 .similar-product-slider{
+  &.slick-dotted.slick-slider{
+    margin-bottom: 11px;
+    padding-bottom: 25px;
+    @media($bp-larger-than-tablet){
+      margin-bottom: 25px;
+    }
+  }
+  .slick-dots{
+    &__wrapper{
+      position: absolute;
+      bottom: -5px;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+      .slick-dots{
+        position: relative;
+        bottom: auto;
+        display: inline-block;
+        width: auto;
+        line-height: 10px;
+        vertical-align: middle;
+      }
+      .slick-dots-prev{
+        //border: 1px red solid;
+        //width: 12px;
+        height: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        cursor: pointer;
+        margin-right: 4px;
+        line-height: 10px;
+        &:before{
+          display: inline-block;
+          content: "";
+          @include sprite($arrow-slider);
+          transform: rotate(180deg);
+        }
+      }
+      .slick-dots-next{
+        //border: 1px red solid;
+        //width: 12px;
+        height: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        cursor: pointer;
+        margin-left: 4px;
+        line-height: 10px;
+        &:before{
+          display: inline-block;
+          content: "";
+          @include sprite($arrow-slider);
+        }
+      }
+    }
+    li {
+      width: 10px;
+      height: 10px;
+      margin: 0 3px;
+      vertical-align: middle;
+      @media($bp-larger-than-desktop){
+        width: 15px;
+        height: 15px;
+        margin: 0 2px;
+      }
+      button{
+        width: 10px;
+        height: 10px;
+        @media($bp-larger-than-desktop){
+          width: 15px;
+          height: 15px;
+        }
+      }
+      &.slick-active button::before {
+        background-color: $gold;
+      }
+    }
+    button::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      background-color: $border-color;
+      opacity: 1;
+      @media($bp-larger-than-desktop){
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+
+
+.viewed-product-slider{
   &.slick-dotted.slick-slider{
     margin-bottom: 11px;
     padding-bottom: 25px;
