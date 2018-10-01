@@ -2013,6 +2013,12 @@ $header-height: 80px;
         color: #4c4c4c;
       }
     }
+
+  }
+  &__golink{
+    color: $gold;
+    font-weight: bold;
+    text-decoration: none;
   }
   /*&__link{
     a{
@@ -2944,6 +2950,85 @@ $checkboxSizeAgreeMobile: 16px;
         width: 15px;
         height: 15px;
       }
+    }
+  }
+}
+
+.xform{
+  max-width: 540px;
+  &__grid{
+    @media($bp-larger-than-tablet) {
+      display: flex;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+  input[type="text"] {
+    border: 1px solid $border-color;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    max-width: 360px;
+    padding: 0 15px;
+    color: #4c4c4c;
+    font-size: 15px;
+  }
+  textarea {
+    color: #4c4c4c;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid $border-color;
+    resize: none;
+    border-radius: 4px;
+    height: 100px;
+    padding: 12px;
+  }
+  &__caption{
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__left{
+    width: 100%;
+    @media($bp-larger-than-tablet) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  &__right{
+    width: 100%;
+    @media($bp-larger-than-tablet) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  &__group{
+    margin-bottom: 20px;
+  }
+  &__agree{
+    text-align: center;
+    margin-bottom: 30px;
+    .checkbox-custom{
+      border: 1px solid $border-color;
+    }
+  }
+  &__submit{
+    text-align: center;
+  }
+  .btn{
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    margin-left: 0;
+    @media($bp-larger-than-mobile){
+      margin-left: 15px;
+    }
+    @media($bp-larger-than-desktophd){
+      width: 238px;
     }
   }
 }

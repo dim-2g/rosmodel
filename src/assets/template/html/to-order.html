@@ -14,46 +14,52 @@
 
 <div class="order">
     <div class="container">
-        <div class="order-maket">
-            <div class="order-nav">
-                <ul>
-                    <li class="order-nav__item">
-                        <a data-tab=".xtab-standart" href="#" class="order-nav__link active">
-                            <span>Стандарт</span>
-                        </a>
-                    </li>
-                    <li class="order-nav__item">
-                        <a data-tab=".xtab-business" href="#" class="order-nav__link">
-                            <span>Бизнес</span>
-                        </a>
-                    </li>
-                    <li class="order-nav__item">
-                        <a data-tab=".xtab-premium" href="#" class="order-nav__link">
-                            <span>Премиум</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="order-tabs">
-
-                <div class="order-tabs__tab xtab active xtab-standart">
-                    <div class="order-image">
-                        <img src="/assets/template/images/order.png" alt="">
-                    </div>
-                </div>
-                <div class="order-tabs__tab xtab xtab-business">
-                    <div class="order-image">
-                        <img src="/assets/template/images/order.png" alt="">
-                    </div>
-                </div>
-                <div class="order-tabs__tab xtab xtab-premium">
-                    <div class="order-image">
-                        <img src="/assets/template/images/order.png" alt="">
-                    </div>
-                </div>
-
+        <div class="order__border">
+            <div class="delivery__caption caption-block">
+                <span class="caption-block__text">Макет на заказ</span>
             </div>
 
+            <div class="order-maket">
+                <div class="order-nav">
+                    <ul>
+                        <li class="order-nav__item">
+                            <a data-tab=".xtab-standart" href="#" class="order-nav__link active">
+                                <span>Стандарт</span>
+                            </a>
+                        </li>
+                        <li class="order-nav__item">
+                            <a data-tab=".xtab-business" href="#" class="order-nav__link">
+                                <span>Бизнес</span>
+                            </a>
+                        </li>
+                        <li class="order-nav__item">
+                            <a data-tab=".xtab-premium" href="#" class="order-nav__link">
+                                <span>Премиум</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-tabs">
+
+                    <div class="order-tabs__tab xtab active xtab-standart">
+                        <div class="order-image">
+                            <img src="/assets/template/images/order.png" alt="">
+                        </div>
+                    </div>
+                    <div class="order-tabs__tab xtab xtab-business">
+                        <div class="order-image">
+                            <img src="/assets/template/images/order.png" alt="">
+                        </div>
+                    </div>
+                    <div class="order-tabs__tab xtab xtab-premium">
+                        <div class="order-image">
+                            <img src="/assets/template/images/order.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
@@ -66,7 +72,7 @@
             </div>
             <div class="brief__grid">
                 <div class="brief__item">
-                    <div class="brief__box">
+                    <div class="brief__box active">
                         <div class="brief__name">
                             Знаю что хочу!
                         </div>
@@ -104,10 +110,10 @@
                 </div>
             </div>
 
-            <div class="brief-form">
+            <div class="brief-form brief-form--to-order">
                 <div class="brief-form__overlay">
                     <div class="brief-form__caption">
-                        Мы свяжемся с вами в течение 1 рабочего дня и сделаем интересное предложение
+                        Мы свяжемся с вами<br class="in-mobile"/> в течение 1 рабочего дня и<br class="in-mobile"/> сделаем интересное предложение
                     </div>
                     <form action="">
                         <div class="brief-form__inputs">
@@ -134,15 +140,16 @@
                         </div>
 
                         <div class="brief-form__bottom">
-                            <label class="check-custom">
-                                <input type="hidden" name="iagree[]" value="0">
-                                <input class="checkbox" name="iagree" type="checkbox" value="Согласен">
-                                <span class="checkbox-custom"></span>
-                                <span class="label">
-                                Даю согласие на обработку моих персональных данных
-                                </span>
-                            </label>
-
+                            <div class="brief-form__agree">
+                                <label class="check-custom">
+                                    <input type="hidden" name="iagree[]" value="0">
+                                    <input class="checkbox" name="iagree" type="checkbox" value="Согласен">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">
+                                    Я даю согласие на обработку моих персональных данных
+                                    </span>
+                                </label>
+                            </div>
                             <button type="submit" class="btn">Получить предложение</button>
 
                         </div>

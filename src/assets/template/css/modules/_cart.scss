@@ -4,8 +4,7 @@
     position: relative;
     padding-bottom: 4px;
     &:before {
-      content: "";
-      display: inline-block;
+      display: none;
       position: absolute;
       top: 17px;
       bottom: 5px;
@@ -17,6 +16,10 @@
       max-width: 1000px;
       width: 100%;
       transform: translateX(-50%);
+      @media($bp-larger-than-desktop) {
+        content: "";
+        display: inline-block;
+      }
     }
     > div {
       position: relative;
@@ -31,12 +34,14 @@
   &__table{
     width: 100%;
     background-color: #fff;
-    border-left: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
     margin-bottom: 28px;
     border-radius: 4px;
-    @media($bp-larger-than-tablet) {
+    border-top: 1px solid #d9d9d9;
+    @media($bp-larger-than-desktop) {
       display: table;
+      border-top: 0 none;
+      border-left: 1px solid #d9d9d9;
+      border-right: 1px solid #d9d9d9;
     }
   }
   &__row{

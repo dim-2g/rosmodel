@@ -87,7 +87,7 @@
                     <a href="#">+7 (495) 369-21-99</a>
                 </div>
                 <div class="header__feedback">
-                    <a href="#">Связаться с нами</a>
+                    <a href="#affeedback" data-fancybox="">Связаться с нами</a>
                 </div>
             </div>
         </div>
@@ -410,6 +410,48 @@
         </div>
     </div>
 
+</div>
+
+<div style="display: none;">
+    <div id="affeedback" class="form-callback xform ajax_form af_feedback">
+        <div class="xform__caption">Пишите! Ответим на все вопросы</div>
+        <form action="">
+            <div class="xform__grid">
+                <div class="xform__left">
+                    <div class="xform__group">
+                        <div class="xform__item">
+                            <input type="text" name="name" placeholder="Имя*">
+                        </div>
+                    </div>
+                    <div class="xform__group">
+                        <div class="xform__item">
+                            <input type="text" name="name" placeholder="Email*">
+                        </div>
+                    </div>
+                </div>
+                <div class="xform__right">
+                    <div class="xform__group">
+                        <div class="xform__item">
+                            <textarea name="message" id="" placeholder="Сообщение"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xform__agree">
+                <label class="check-custom">
+                    <input type="hidden" name="iagree[]" value="0">
+                    <input class="checkbox" name="iagree" type="checkbox" value="Согласен">
+                    <span class="checkbox-custom"></span>
+                    <span class="label">
+                        Согласие на обработку личных данных
+                    </span>
+                </label>
+            </div>
+            <div class="xform__submit">
+                <div class="btn">Отправить</div>
+            </div>
+        </form>
+    </div>
 </div>
 
 
