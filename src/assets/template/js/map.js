@@ -8,7 +8,7 @@ hideMapOnMobile = function() {
     if ($(window).width()<750) {
         setTimeout(function() {
             $('#map.hidden').slideUp();
-        }, 7000);
+        }, 5000);
     }
 };
 

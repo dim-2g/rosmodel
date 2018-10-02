@@ -1,12 +1,15 @@
 .reviews{
-  margin-bottom: 30px;
+  @media($bp-larger-than-desktop) {
+    margin-bottom: 30px;
+  }
   &__border{
     position: relative;
     padding-bottom: 30px;
-    margin-bottom: 34px;
+    @media($bp-larger-than-desktop) {
+      margin-bottom: 34px;
+    }
     &:before{
-      content: "";
-      display: inline-block;
+      display: none;
       position: absolute;
       top: 17px;
       bottom: 5px;
@@ -18,6 +21,10 @@
       max-width: 600px;
       width: 100%;
       transform: translateX(-50%);
+      @media($bp-larger-than-desktop) {
+        content: "";
+        display: inline-block;
+      }
     }
     > div{
       position: relative;
@@ -33,11 +40,10 @@
     padding-bottom: 0;
     padding-top: 30px;
     &:before{
-      content: "";
-      display: inline-block;
+      display: none;
       position: absolute;
       top: 0px;
-      bottom: 0px;
+      bottom: 7px;
       left: 50%;
       right: 111px;
       border: 1px solid #ebebeb;
@@ -46,6 +52,10 @@
       max-width: 780px;
       width: 100%;
       transform: translateX(-50%);
+      @media($bp-larger-than-desktop) {
+        content: "";
+        display: inline-block;
+      }
     }
     > div{
       position: relative;
@@ -58,6 +68,10 @@
     margin-right: -15px;
     flex-wrap: wrap;
     margin-bottom: -13px;
+    justify-content: center;
+    @media($bp-larger-than-desktop) {
+      justify-content: flex-start;
+    }
   }
   &__box{
     padding-right: 15px;
@@ -66,19 +80,34 @@
   &__item{
     display: flex;
     background-color: #fff;
-    border: 1px solid $border-color;
-    border-radius: 4px;
-    padding: 28px 50px 30px 30px;
+    border-bottom: 1px solid $border-color;
+    padding: 28px 0;
     max-width: 570px;
-    height: 260px;
-    margin-bottom: 30px;
+    flex-direction: column;
+    @media($bp-larger-than-tablet) {
+      margin-bottom: 30px;
+      border-radius: 4px;
+      border: 1px solid $border-color;
+      flex-direction: row;
+      padding: 28px 25px 28px 25px;
+    }
+    @media($bp-larger-than-desktophd) {
+      padding: 28px 50px 30px 30px;
+      height: 260px;
+    }
   }
   &__image{
-    padding-right: 15px;
-    width: 155px;
+    width: 100%;
     flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    @media($bp-larger-than-tablet) {
+      margin-bottom: 0;
+      padding-right: 15px;
+      width: 155px;
+    }
     img{
-      width: 100%;
+      max-width: 100%;
     }
   }
   &__info{
@@ -86,10 +115,13 @@
     padding-top: 4px;
   }
   &__name{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: $font-weight-bold;
     margin-bottom: 14px;
     letter-spacing: 0.2px;
+    @media($bp-larger-than-tablet) {
+      font-size: 20px;
+    }
   }
   &__data{
     color: #999999;
@@ -103,12 +135,16 @@
       height: 3px;
       background-color: $gold;
       top: 50%;
-      left: 28%;
+      left: 90px;
       transform: translate(-50%,-50%);
     }
   }
   &__text{
     line-height: 134%;
+    font-size: 14px;
+    @media($bp-larger-than-tablet) {
+      font-size: 15px;
+    }
   }
   &__goto{
     text-align: center;
@@ -123,6 +159,10 @@
     color: #4c4c4c;
     position: relative;
     z-index: 2;
+    margin-top: 3px;
+    @media($bp-larger-than-tablet) {
+      margin-top: 0;
+    }
   }
 }
 .review-form{
@@ -132,28 +172,39 @@
   border-radius: 5px;
   background-color: #fff;
   &__overlay{
-    border: 1px solid $border-color;
-    padding: 14px 30px 20px;
-    border-radius: 5px;
 
+    @media($bp-larger-than-tablet) {
+      border-radius: 5px;
+      padding: 14px 30px 20px;
+      border: 1px solid $border-color;
+    }
   }
   &__caption{
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: $font-weight-bold;
     margin-bottom: 16px;
+    @media($bp-larger-than-tablet) {
+      font-size: 20px;
+    }
   }
   &__list{
-    display: flex;
     margin-bottom: 7px;
+    @media($bp-larger-than-tablet) {
+      display: flex;
+    }
   }
   &__inputs{
-    width: 300px;
+    @media($bp-larger-than-tablet) {
+      width: 300px;
+    }
   }
   &__input-box{
-    padding-right: 10px;
     width: 100%;
     margin-bottom: 10px;
+    @media($bp-larger-than-tablet) {
+      padding-right: 10px;
+    }
   }
   input[type="text"]{
     height: 40px;
@@ -161,32 +212,52 @@
     width: 100%;
     border: 1px solid $border-color;
     border-radius: 4px;
-    max-width: 250px;
     padding: 0 15px;
     color: #4c4c4c;
     font-size: 15px;
+    @media($bp-larger-than-tablet) {
+      max-width: 250px;
+    }
   }
   textarea{
     color: #4c4c4c;
     font-size: 15px;
-    width: 520px;
+    width: 100%;
     height: 90px;
     border: 1px solid $border-color;
     resize: none;
     border-radius: 4px;
     padding: 10px 20px;
+    @media($bp-larger-than-tablet) {
+      width: 400px;
+    }
+    @media($bp-larger-than-desktop) {
+      width: 520px;
+    }
   }
 
   &__bottom{
     border-top: 1px solid $border-color;
     padding-top: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    @media($bp-larger-than-tablet) {
+      display: flex;
+    }
     .checkbox-custom {
       border: 1px solid #d9d9d9;
-      }
+
     }
+    .check-custom{
+      margin-bottom: 15px;
+      text-align: left;
+      @media($bp-larger-than-tablet) {
+        margin-bottom: 0;
+      }
+
+    }
+  }
 
   .btn{
     height: 40px;
@@ -194,14 +265,20 @@
     border-radius: 4px;
     font-weight: $font-weight-bold;
     font-size: 14px;
-    margin-left: 50px;
+    @media($bp-larger-than-tablet) {
+      margin-left: 50px;
+    }
   }
   .check-custom .checkbox-custom{
     margin-top: 2px;
   }
   &__attach{
     text-align: center;
+    margin-top: 15px;
     margin-bottom: 15px;
+    @media($bp-larger-than-tablet) {
+      margin-top: 0;
+    }
     label{
       cursor: pointer;
       position: relative;

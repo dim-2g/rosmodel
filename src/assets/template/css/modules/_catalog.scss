@@ -5,7 +5,7 @@
   &__border{
     position: relative;
     @media($bp-larger-than-desktop) {
-      padding-bottom: 34px;
+      padding-bottom: 4px;
     }
     &:before{
       display: none;
@@ -32,11 +32,17 @@
 }
 .maket-block{
   display: none;
-  justify-content: space-between;
+
   margin-right: -10px;
   margin-left: -10px;
-  @media($bp-larger-than-tablet) {
+  @media($bp-larger-than-desktop) {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media($bp-larger-than-desktophd) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
   }
   &__item{
     padding-left: 10px;
@@ -99,6 +105,7 @@
     background-color: #fff;
     display: inline-block;
     cursor: pointer;
+    margin-bottom: 30px;
     &:hover{
       .maket-block__image:before{
         opacity: 1;
@@ -214,7 +221,13 @@
   border: 1px solid $border-color;
   border-radius: 3px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   @media($bp-larger-than-tablet) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @media($bp-larger-than-desktop) {
     display: none;
   }
   &__list{
