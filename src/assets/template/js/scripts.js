@@ -25,7 +25,7 @@ $(function() {
         $('.mobile-menu').slideUp();
         var hx = 0;
         //if ($(window).width()<1000) {
-            hx = -90;
+            hx = -120;
         //}
         var selector = $(this).attr('data-goto');
         $('html, body').animate({ scrollTop: $(selector).offset().top + hx}, 1200);
@@ -49,6 +49,39 @@ $(function() {
 
     $('.brief__box').click(function(){
        $(this).toggleClass('active');
+    });
+
+
+    $(".incrementer .minus").on("click", function (e) {
+        e.preventDefault();
+        var input = $(this).parents(".incrementer").find(".js_zcount");
+        var input_val = parseInt( input.val() );
+
+        if(input_val > 1){
+            input_val--;
+            input.attr("data-current", input_val);
+            input.val(input_val);
+        }
+        if (input.hasClass('count_live')) {
+            input.parents('form').submit();
+        }
+    });
+
+    $(".incrementer .plus").on("click", function (e) {
+        e.preventDefault();
+        var input = $(this).parents(".incrementer").find(".js_zcount");
+        var input_val = parseInt( input.val() );
+
+        if(input_val < 999){
+            input_val++;
+            input.attr("data-current", input_val);
+            input.val(input_val);
+        }
+
+
+        if (input.hasClass('count_live')) {
+            input.parents('form').submit();
+        }
     });
 
     //скрываем блоки на мобильной версии

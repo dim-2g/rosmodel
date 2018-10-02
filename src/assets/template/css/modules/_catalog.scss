@@ -47,6 +47,11 @@
   &__item{
     padding-left: 10px;
     padding-right: 10px;
+    &.active{
+      .maket-block__image:before{
+        opacity: 1;
+      }
+    }
     a{
       text-decoration: none;
       font-size: 14px;
@@ -111,6 +116,7 @@
         opacity: 1;
       }
     }
+
   }
   &__image{
     width: 150px;

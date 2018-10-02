@@ -383,6 +383,12 @@ $header-height: 80px;
   }
 }
 .mini-cart{
+  &:hover{
+    .cart-items{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
   &__icon{
     display: inline-block;
     height: 25px;
@@ -426,8 +432,156 @@ $header-height: 80px;
     transform: translateY(-2px);
   }
   &__items{
-    display: none;
+    //display: none;
   }
+
+  .cart-items{
+    visibility: hidden;
+    opacity: 0;
+    //display: none;
+    transition: $anim;
+    cursor: default;
+    position: absolute;
+    width: 262px;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    z-index: 100;
+    box-shadow: 0 3px 10px -3px #ccc;
+    .xbtn{
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.mini-cart{
+  color: #4c4c4c;
+  position: relative;
+
+  &__label{
+    display: none;
+    letter-spacing: 1.6px;
+    font-weight: 500;
+    @media($bp-larger-than-tablet){
+      display: inline-block;
+    }
+  }
+  &__order{
+    color: #facc52;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    transition: $anim;
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+    &:hover{
+      color: #4c4c4c;
+    }
+  }
+  &__image{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    max-width: 262px;
+
+  }
+  li{
+    list-style-type: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 0;
+  }
+  &__body{
+    padding: 0 20px;
+  }
+  &__name-row{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__row{
+    display: flex;
+  }
+  &__name{
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+  }
+  &__data{
+    width: 100%;
+  }
+  &__price-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__count{
+    font-size: 12px;
+    font-weight: $font-weight-bold;
+  }
+
+  &__remove{
+    background-color: transparent;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    transition: $anim;
+    margin-left: 20px;
+    &:before{
+      position: absolute;
+      content: "";
+      @include sprite($cart-close);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover{
+      background-color: #858585;
+      &:before{
+        @include sprite($cart-close-white);
+      }
+    }
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+  }
+  &__price-name{
+    color: #999999;
+    font-size: 14px;
+  }
+  &__price{
+    line-height: 100%;
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    .rub:before{
+      font-size: 16px;
+    }
+  }
+  &__params{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: $font-weight-bold;
+  }
+
 }
 
 .topline-mobile{
@@ -523,6 +677,7 @@ $header-height: 80px;
       transform: translate(-50%, -50%) scale(0.75);
       @include sprite($cart);
     }
+
   }
 }
 
@@ -1523,6 +1678,10 @@ $header-height: 80px;
     //margin-bottom: 28px;
     margin-left: auto;
     margin-right: auto;
+    @media($bp-larger-than-desktop){
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   &__card{
     max-width: 270px;
@@ -1587,6 +1746,9 @@ $header-height: 80px;
     font-weight: $font-weight-bold;
     font-size: 16px;
     padding-top: 3px;
+    a{
+      text-decoration: none;
+    }
   }
   &__price{
     width: 100%;
@@ -3032,6 +3194,30 @@ $checkboxSizeAgreeMobile: 16px;
     }
     @media($bp-larger-than-desktophd){
       width: 238px;
+    }
+  }
+}
+
+#jGrowl{
+  z-index: 99998;
+  .af-message-error{
+    background-color: #f06966 !important;
+  }
+  .af-message-success{
+    background-color: #6abe83 !important;
+  }
+  .jGrowl-notification{
+    padding: 15px;
+    border-radius: 0;
+    width: 280px;
+    font-weight: bold;
+    font-size: 12px !important;
+    line-height: 150% !important;
+    margin: 0 !important;
+    @media($bp-larger-than-phablet ) {
+      width: 360px;
+      font-size: 14px !important;
+      margin: 5px !important;
     }
   }
 }
