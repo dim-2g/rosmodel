@@ -207,6 +207,9 @@
 .fancybox-slide--html{
   .master-popup {
     overflow: visible;
+    @media($bp-larger-than-tablet) {
+      width: 570px;
+    }
     &.fancybox-content{
       padding: 20px;
     }

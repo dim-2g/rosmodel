@@ -63,6 +63,7 @@ $(function() {
             input.val(input_val);
         }
         if (input.hasClass('count_live')) {
+            input.trigger('change');
             input.parents('form').submit();
         }
     });
@@ -80,8 +81,17 @@ $(function() {
 
 
         if (input.hasClass('count_live')) {
+            input.trigger('change');
             input.parents('form').submit();
         }
+    });
+
+    $('body').on('change', '#msCart input[name="count"]', function(){
+        //console.log('change');
+        var id = '#' + $( this ).closest( '.cart-item' ).attr( 'id' );
+        var count = parseInt($( this ).val());
+        var price = parseInt( $( id + ' .cart-item-cost' ).text().replace( /\s+/g, '' ) );
+        $( id + ' .price-sum' ).html( miniShop2.Utils.formatPrice(count * price) );
     });
 
     //скрываем блоки на мобильной версии

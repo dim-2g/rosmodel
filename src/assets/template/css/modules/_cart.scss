@@ -328,6 +328,9 @@
     max-width: none;
     margin-bottom: 100px;
   }
+  #msOrder{
+    margin-top: 0;
+  }
   &__border {
     position: relative;
     @media($bp-larger-than-desktop) {
