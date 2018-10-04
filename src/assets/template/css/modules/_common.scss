@@ -383,10 +383,12 @@ $header-height: 80px;
   }
 }
 .mini-cart{
-  &:hover{
-    .cart-items{
-      visibility: visible;
-      opacity: 1;
+  &.full{
+    &:hover{
+      .cart-items{
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
   &__icon{
@@ -2255,7 +2257,8 @@ $checkboxSizeAgreeMobile: 16px;
     }
   }
   .checkbox.error + .checkbox-custom {
-    border-color: red;
+    border-color: $error-color;
+    background-color: $error-background;
   }
 }
 
@@ -2324,6 +2327,10 @@ $checkboxSizeAgreeMobile: 16px;
     @media($bp-larger-than-mobile) {
       padding: 0 20px;
     }
+    &.error{
+      border-color: $error-color;
+      background-color: $error-background;
+    }
   }
   textarea{
     color: #4c4c4c;
@@ -2336,6 +2343,10 @@ $checkboxSizeAgreeMobile: 16px;
     padding: 12px;
     @media($bp-larger-than-mobile) {
       padding: 12px 14px;
+    }
+    &.error{
+      border-color: $error-color;
+      background-color: $error-background;
     }
   }
   &__message{
@@ -3138,6 +3149,10 @@ $checkboxSizeAgreeMobile: 16px;
     padding: 0 15px;
     color: #4c4c4c;
     font-size: 15px;
+    &.error{
+      border-color: $error-color;
+      background-color: $error-background;
+    }
   }
   textarea {
     color: #4c4c4c;
@@ -3148,6 +3163,10 @@ $checkboxSizeAgreeMobile: 16px;
     border-radius: 4px;
     height: 100px;
     padding: 12px;
+    &.error{
+      border-color: $error-color;
+      background-color: $error-background;
+    }
   }
   &__caption{
     font-size: 24px;
@@ -3201,7 +3220,7 @@ $checkboxSizeAgreeMobile: 16px;
 #jGrowl{
   z-index: 99998;
   .af-message-error{
-    background-color: #f06966 !important;
+    background-color: #b3071b !important;
   }
   .af-message-success{
     background-color: #6abe83 !important;
