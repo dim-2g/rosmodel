@@ -1,5 +1,7 @@
-@import '../fonts/font-awesome.css';
-@import '../fonts/pfagorasanspro/stylesheet.css';
+@import '../fonts/font-awesome.scss';
+@import '../fonts/pfagorasanspro/stylesheet.scss';
+@import '../fonts/exotwo/min.scss';
+@import '../fonts/play/min.scss';
 @import 'skeleton/skeleton';
 /*@import 'materialize/sass/materialize';*/
 @import 'modules/variables';
@@ -19,3 +21,4 @@
 @import "modules/cart-empty";
 @import "modules/cart";
 @import "modules/reviews";
+@import "modules/manual";

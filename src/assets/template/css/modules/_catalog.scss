@@ -173,9 +173,6 @@
   &__more{
     display: block;
     text-align: center;
-    @media($bp-larger-than-desktop) {
-      display: none;
-    }
     a{
       font-size: 14px;
       text-decoration: none;
@@ -183,7 +180,7 @@
   }
 }
 .promotion{
-  padding-bottom: 40px;
+  padding-bottom: 0;
   &__border{
     position: relative;
     @media($bp-larger-than-desktop) {
@@ -230,8 +227,7 @@
   margin-left: auto;
   margin-right: auto;
   @media($bp-larger-than-tablet) {
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: 20px;
   }
   @media($bp-larger-than-desktop) {
     display: none;
@@ -259,6 +255,62 @@
     &--2{
       a:before{
         @include sprite($maket-2mobile);
+      }
+    }
+    &--3{
+      a:before{
+        @include sprite($maket-3mobile);
+      }
+    }
+    &--4{
+      a:before{
+        @include sprite($maket-4mobile);
+      }
+    }
+    &--5{
+      a:before{
+        @include sprite($maket-5mobile);
+      }
+    }
+    &--6{
+      a:before{
+        @include sprite($maket-6mobile);
+      }
+    }
+    &--7{
+      a:before{
+        @include sprite($maket-7mobile);
+      }
+    }
+    &--8{
+      a:before{
+        @include sprite($wood-house-small);
+      }
+    }
+    &--9{
+      a:before{
+        @include sprite($expo-small);
+      }
+    }
+    &--10{
+      a:before{
+        @include sprite($residential-complex-small);
+      }
+    }
+    &--11{
+      a:before{
+        @include sprite($icon-inter-maket-small);
+      }
+    }
+    &--12{
+      a:before{
+        left: 25px;
+        @include sprite($icon-cosmos-small);
+      }
+    }
+    &--13{
+      a:before{
+        @include sprite($icon-rocket-small);
       }
     }
   }

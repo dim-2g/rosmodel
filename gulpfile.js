@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rjs = require('gulp-requirejs'),
-    uglify = require('gulp-uglify'),
+    //uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify-es').default,
     concat = require('gulp-concat'),
     copy = require('gulp-contrib-copy'),
     preprocess = require('gulp-preprocess'),
@@ -31,6 +32,7 @@ var path = {
         css: 'public/assets/template/css/',
         img: 'public/assets/template/img/',
         sprites: 'public/assets/template/img/sprites/',
+        spritescustom: 'public/assets/template/img/sprites_custom/',
     },
     src: {
         root: 'src/',
@@ -38,25 +40,29 @@ var path = {
         js: 'src/assets/template/js/**/*.js',
         rjs: 'src/assets/template/js/',
         scripts: 'src/assets/template/scripts/**/*.js',
-        sass: 'src/assets/template/css/main.scss',
+        sass: 'src/assets/template/css/*.scss',
         css: 'src/assets/template/css/',
         img: 'src/assets/template/img/**/*.*',
         requirejsLib: 'src/assets/template/lib/require.js',
         lib: '../lib/',
         tpl: '../tpl/',
-        sprites: 'src/assets/template/sprites/*.*'
+        sprites: 'src/assets/template/sprites/*.*',
+        spritescustom: 'src/assets/template/sprites_custom/*.*',
     },
     dev: {
-        sprites: 'src/assets/template/css/sprites/'
+        sprites: 'src/assets/template/css/sprites/',
+        spritescustom: 'src/assets/template/css/sprites/',
     },
     watch: {
         html: 'src/assets/template/html/**/*.html',
         sass: 'src/assets/template/css/**/*.scss',
+        sassd: 'src/assets/template/css/*.scss',
         js: 'src/assets/template/js/**/*.js',
         tpl: 'src/assets/template/tpl/**/*.html',
-        sprites: 'src/assets/template/sprites/*.*'
+        sprites: 'src/assets/template/sprites/*.*',
+        spritescustom: 'src/assets/template/sprites_custom/*.*',
     },
-    clean: ['public', 'src/assets/template/css/main.css', 'src/assets/template/css/sprites/', 'src/assets/template/*.html']
+    clean: ['public', 'src/assets/template/css/main.css', 'src/assets/template/css/sprites/', 'src/assets/template/css/sprites_custom/', 'src/assets/template/*.html']
 };
 
 // Конфиги для локального вебсервера
@@ -92,9 +98,9 @@ gulp.task('clean', function() {
 gulp.task('sass:dev', function() {
     return gulp.src(path.src.sass)
         .pipe(plumber())
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.src.css))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -105,6 +111,8 @@ gulp.task('sass:dev2', function() {
         //.pipe(sourcemaps.init())
         .pipe(sass())
         //.pipe(sourcemaps.write())
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.src.css))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -220,6 +228,17 @@ gulp.task('sprite:dev', function () {
   //return spriteData.pipe(gulp.dest(path.tmp.sprites));
 });
 
+gulp.task('spritecustom:dev', function () {
+    var spriteData = gulp.src(path.src.spritescustom).pipe(spritesmith({
+      imgName: 'sprite_custom.png',
+      imgPath: '/assets/template/css/sprites/sprite_custom.png',
+      cssName: 'sprite_custom.scss'
+    }));
+    var imgStream = spriteData.img.pipe(gulp.dest(path.dev.spritescustom));
+    var cssStream = spriteData.css.pipe(gulp.dest(path.dev.spritescustom));
+    return merge(imgStream, cssStream);
+});
+
 gulp.task('sprite:prod', function () {
   var spriteData = gulp.src(path.src.sprites).pipe(spritesmith({
     imgName: 'sprite.png',
@@ -248,6 +267,25 @@ gulp.task('watch', function(){
     watch([path.watch.sass], function(event, cb) {
         gulp.start('sass:dev');
     });
+    watch([path.watch.sassd], function(event, cb) {
+        gulp.start('sass:dev');
+    });
+    watch([path.watch.sprites], function(event, cb) {
+        gulp.start('sprite:dev');
+    });
+    //watch([path.watch.js, path.watch.tpl]).on('change', browserSync.reload);
+});
+
+gulp.task('watch2', function(){
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html:dev');
+    });
+    watch([path.watch.sass], function(event, cb) {
+        gulp.start('sass:dev2');
+    });
+    watch([path.watch.sassd], function(event, cb) {
+        gulp.start('sass:dev2');
+    });
     watch([path.watch.sprites], function(event, cb) {
         gulp.start('sprite:dev');
     });
@@ -265,27 +303,43 @@ gulp.task('webserver:prod', function () {
     browserSync(webserver.prod);
 });
 
+gulp.task('js', function () {
+    return gulp.src([
+        'src/assets/template/vendor/jquery-3.2.1.min.js', 
+        'src/assets/template/vendor/owlcarousel/owl.carousel.min.js',
+        'src/assets/template/vendor/slick/slick.js',
+        'src/assets/template/vendor/jquery.inputmask.bundle.js',
+        'src/assets/template/vendor/fancybox/jquery.fancybox.min.js',
+        'src/assets/components/msminicartdynamic/js/web/msminicartdynamic.js',
+        'src/assets/components/stopspam/default.js',
+        'src/assets/template/js/map.js',
+        ])
+        .pipe(uglify())
+        .pipe(concat('build.js'))
+        .pipe(gulp.dest('src/assets/template/vendor/'));
+});
 
-// Режим разработки
-gulp.task('develop', gulpsync.sync([
-    'clean',
-    'sprite:dev',
-    [
-        'html:dev',
-        'sass:dev'
-    ],
-    'watch',
-    'webserver:dev'
-]));
+
+gulp.task('css', function () {
+    return gulp.src([
+        'src/assets/template/vendor/slick/slick.css', 
+        'src/assets/template/vendor/owlcarousel/owl.carousel.min.css',
+        'src/assets/template/vendor/owlcarousel/owl.theme.default.min.css',
+        'src/assets/template/vendor/slick/slick-theme.css',
+        'src/assets/template/vendor/fancybox/jquery.fancybox.min.css',
+        ])
+        .pipe(concat('build.css'))
+        .pipe(gulp.dest('src/assets/template/vendor/'));
+});
 
 gulp.task('develop2', gulpsync.sync([
-    'clean',
+    //'spritecustom:dev',
     'sprite:dev',
     [
         'html:dev',
         'sass:dev2'
     ],
-    'watch',
+    'watch2',
     'webserver:dev'
 ]));
 

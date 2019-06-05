@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
-    <link rel="stylesheet" href="/assets/template/css/main.css">
+    <link rel="stylesheet" href="/assets/template/css/main.min.css">
+    <link rel="stylesheet" href="/assets/template/css/custom.css">
 
 </head>
 <body>
@@ -217,102 +218,135 @@
     </div>
 </div>
 
-<div class="brief">
+
+<div class="b-making">
     <div class="container">
-        <div class="brief__border">
-            <div class="brief__caption caption-block">
-                <span class="caption-block__text">Оставьте заявку и получите предложение по вашему макету</span>
+        <div class="b-making__border">
+            <div class="b-making__caption caption-block">
+                <span class="caption-block__text">Изготовление макетов на заказ</span>
             </div>
-            <div class="brief__grid">
-                <div class="brief__item">
-                    <div class="brief__box active">
-                        <div class="brief__name">
-                            Знаю что хочу!
-                        </div>
-                        <div class="brief__text">
-                            Если вы знаете, чего хотите - заполните бриф и прикрепите его к форме ниже
-                        </div>
-                        <div class="brief__link">
-                            <a href="#" class="brief__golink">
-                                Скачать и заполнить бриф
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="brief__item">
-                    <div class="brief__box">
-                        <div class="brief__name">
-                            Неуверен в выборе
-                        </div>
-                        <div class="brief__text">
-                            Если пока не знаете точно, что вам нужно, заполните форму справа и просто
-                            опишите кратко ваш проект. Мы пришлем вам наше предложение по реализации
-                        </div>
-                    </div>
-                </div>
-                <div class="brief__item">
-                    <div class="brief__box">
-                        <div class="brief__name">
-                            Сомневаюсь
-                        </div>
-                        <div class="brief__text">
-                            Если сомневаетесь в качестве будущего макета, Вы можете запросить пробный образец через форму ниже
-                            - мы сделаем его для вас бесплатно
-                        </div>
-                    </div>
-                </div>
+            <div class="b-making__descr">
+                Наш основной профиль - создание макетов по эскизу или словесному описанию заказчика,
+                на основании которых разрабатывается задание для мастеров.
             </div>
-
-            <div class="brief-form brief-form--to-order">
-                <div class="brief-form__overlay">
-                    <div class="brief-form__caption">
-                        Мы свяжемся с вами<br class="in-mobile"/> в течение 1 рабочего дня и<br class="in-mobile"/> сделаем интересное предложение
+            <div class="b-making__list">
+                <div class="b-making__item">
+                    <div class="b-making__img">
+                        <img src="/assets/template/images/to-order/step-1.png" alt="">
                     </div>
-                    <form action="">
-                        <div class="brief-form__inputs">
-                            <div class="brief-form__input-box">
-                                <input type="text" placeholder="Имя" name="name">
-                            </div>
-                            <div class="brief-form__input-box">
-                                <input type="text" placeholder="Телефон" name="phone" data-mask="+7 (999) 999-99-99">
-                            </div>
-                            <div class="brief-form__input-box">
-                                <input type="text" placeholder="E-mail" name="email">
-                            </div>
-                        </div>
-                        <div class="brief-form__message">
-                            <textarea name="comment" id="" placeholder="Описание вашего макета"></textarea>
-                        </div>
-
-                        <div class="brief-form__attach">
-                            <label for="brief-form_file">
-                                Прикрепить файл
-                                <input id="brief-form_file" name="file" type="file">
-                                <div id="brief-form_filename"></div>
-                            </label>
-                        </div>
-
-                        <div class="brief-form__bottom">
-                            <div class="brief-form__agree">
-                                <label class="check-custom">
-                                    <input type="hidden" name="iagree[]" value="0">
-                                    <input class="checkbox" name="iagree" type="checkbox" value="Согласен">
-                                    <span class="checkbox-custom"></span>
-                                    <span class="label">
-                                    Я даю согласие на обработку моих персональных данных
-                                    </span>
-                                </label>
-                            </div>
-                            <button type="submit" class="btn">Получить предложение</button>
-
-                        </div>
-                    </form>
+                    <div class="b-making__name">
+                        Заявка
+                    </div>
+                    <div class="b-making__info">
+                        Оставьте заявку на сайте или по телефону
+                    </div>
+                    <div class="b-making__timeline">
+                        1 день
+                    </div>
+                </div>
+                <div class="b-making__item">
+                    <div class="b-making__img">
+                        <img src="/assets/template/images/to-order/step-2.png" alt="">
+                    </div>
+                    <div class="b-making__name">
+                        Согласование
+                    </div>
+                    <div class="b-making__info">
+                        Уточняем детали,
+                        рассчитываем стоимость
+                    </div>
+                    <div class="b-making__timeline">
+                        1 - 3 дня
+                    </div>
+                </div>
+                <div class="b-making__item">
+                    <div class="b-making__img">
+                        <img src="/assets/template/images/to-order/step-3.png" alt="">
+                    </div>
+                    <div class="b-making__name">
+                        Проектирование
+                    </div>
+                    <div class="b-making__info">
+                        Проектируем макет и
+                        изготавливаем
+                        детали
+                    </div>
+                    <div class="b-making__timeline">
+                        3 - 10 дней
+                    </div>
+                </div>
+                <div class="b-making__item">
+                    <div class="b-making__img">
+                        <img src="/assets/template/images/to-order/step-4.png" alt="">
+                    </div>
+                    <div class="b-making__name">
+                        Сборка
+                    </div>
+                    <div class="b-making__info">
+                        Красим и собираем макет, делаем подсветку
+                    </div>
+                    <div class="b-making__timeline">
+                        3 - 15 дней
+                    </div>
+                </div>
+                <div class="b-making__item">
+                    <div class="b-making__img">
+                        <img src="/assets/template/images/to-order/step-5.png" alt="">
+                    </div>
+                    <div class="b-making__name">
+                        Отправка
+                    </div>
+                    <div class="b-making__info">
+                        Проверка,  упаковка
+                        и передача готового
+                        макета
+                    </div>
+                    <div class="b-making__timeline">
+                        1 - 2 дня
+                    </div>
                 </div>
             </div>
-
+            <div class="b-making__goto">
+                <span class="b-making__goto-text">
+                    На все макеты действует гарантия 2 года, это фиксируется в договоре
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="b-making-line">
+        <div class="container">
+            <div class="b-making-line__grid">
+                <div class="b-making-line__item">
+                    <div class="b-making-line__timeline">
+                        <span class="b-making-line__timeline-box">1 день</span>
+                    </div>
+                </div>
+                <div class="b-making-line__item">
+                    <div class="b-making-line__timeline">
+                        <span class="b-making-line__timeline-box">1 - 3 дня</span>
+                    </div>
+                </div>
+                <div class="b-making-line__item">
+                    <div class="b-making-line__timeline">
+                        <span class="b-making-line__timeline-box">3 - 10 дней</span>
+                    </div>
+                </div>
+                <div class="b-making-line__item">
+                    <div class="b-making-line__timeline">
+                        <span class="b-making-line__timeline-box">3 - 15 дней</span>
+                    </div>
+                </div>
+                <div class="b-making-line__item">
+                    <div class="b-making-line__timeline">
+                        <span class="b-making-line__timeline-box">1 - 2 дня</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 <div class="making">
     <div class="container">
@@ -459,28 +493,55 @@
                     <img src="/assets/template/images/logo-footer.png" alt="">
                 </div>
                 <div class="footer-top__item footer-top__item--video">
-                    <a href="#" class="btn btn--video">Видео наших работ</a>
+                    <a href="https://www.youtube.com/channel/UC3aZDOA2rle0R1qUNBikJgA " class="btn btn--video" target="_blank" >Видео наших работ</a>
                 </div>
                 <div class="footer-top__item footer-top__item--brief">
-                    <a href="#" class="btn btn--brief">Скачать бриф на макет</a>
+                    <a href="/page/kviz" target="_blank" class="btn btn--brief">Бриф на изготовление макета</a>
                 </div>
                 <div class="footer-top__item footer-top__item--presenttation">
-                    <a href="#" class="btn btn--presentation">Посмотреть презентацию</a>
+                    <a href="/assets/files/Rosmodel_PREZ (2).pdf" target="_blank" class="btn btn--presentation" download>Скачать презентацию</a>
+                </div>
+                <div class="footer-top__item icon icon--insta">
+                    <a href="https://www.instagram.com/rosmodel_moscow/" target="_blank" class="btn insta">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="footer-top__item icon icon--pinterest">
+                    <a href="//www.pinterest.ru/rosmodel/" target="_blank" class="btn print">
+                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <div class="footer-bottom__grid">
-                <div class="footer-bottom__copyright">
-                    2018 © Макетная мастерская "Росмодель"
+            <div class="footer-bottom__row">
+                <div class="footer-bottom__left">
+                    <div class="footer-top__item icon icon--mobile">
+                        <a href="https://www.instagram.com/rosmodel_moscow/" target="_blank" class="btn insta">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-bottom__politic">
-                    <a href="#">Политика конфидициальности</a>
+                <div class="footer-bottom__center">
+                    <div class="footer-bottom__grid">
+                        <div class="footer-bottom__copyright">
+                            2018 © Макетная мастерская "Росмодель"                </div>
+                        <div class="footer-bottom__politic">
+                            <a href="page/private-police">Политика конфидициальности</a>
+                        </div>
+                        <div class="footer-bottom__develop">Разработка сайта -
+                            <a href="https://creative-lab.pro?from=rosmodel">Creative Lab</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-bottom__develop">Разработка сайта -
-                    <a href="#">Creative Lab</a>
+                <div class="footer-bottom__right">
+                    <div class="footer-top__item icon icon--mobile">
+                        <a href="//www.pinterest.ru/rosmodel/" target="_blank" class="btn print">
+                            <i class="fa fa-pinterest" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -488,11 +549,15 @@
 </div>
 
 
-<script src="assets/template/vendor/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="/assets/template/css/main.min.css">
+<link rel="stylesheet" href="/assets/template/vendor/build.css"/>
+<script src="assets/template/vendor/build.js"></script>
+
+<!--script src="assets/template/vendor/jquery-3.2.1.min.js"></script>
 <script src="assets/template/vendor/slick/slick.js"></script>
 <script src="assets/template/vendor/jquery.inputmask.bundle.js"></script>
 <script src="assets/template/vendor/fancybox/jquery.fancybox.min.js"></script>
-<link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css"-->
 <script src="assets/template/js/scripts.js"></script>
 
 

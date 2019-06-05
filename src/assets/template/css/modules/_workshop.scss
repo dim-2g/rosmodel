@@ -186,6 +186,10 @@
       margin-left: 0;
       margin-right: 0;
     }
+    @media(max-width:768px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   &__item{
     padding-left: 13px;
@@ -194,8 +198,7 @@
   &__image{
     border: 1px solid #ebebeb;
     border-radius: 4px;
-    width: 158px;
-    height: 158px;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     img{
@@ -208,7 +211,7 @@
   .master-popup {
     overflow: visible;
     @media($bp-larger-than-tablet) {
-      width: 570px;
+      width: 750px;
     }
     &.fancybox-content{
       padding: 20px;
@@ -233,7 +236,7 @@
 }
 
 .workshop-specialist{
-  max-width: 505px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;

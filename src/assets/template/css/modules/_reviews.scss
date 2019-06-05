@@ -4,7 +4,7 @@
   }
   &__border{
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 0;
     @media($bp-larger-than-desktop) {
       margin-bottom: 34px;
     }
@@ -171,6 +171,7 @@
   margin-right: auto;
   border-radius: 5px;
   background-color: #fff;
+  margin-bottom: 16px;
   &__overlay{
 
     @media($bp-larger-than-tablet) {
@@ -192,6 +193,38 @@
     margin-bottom: 7px;
     @media($bp-larger-than-tablet) {
       display: flex;
+    }
+  }
+  &__hide {
+    text-align: center;
+    display: none;
+    @media($bp-larger-than-tablet) {
+      display: block;
+    }
+  }
+  &__hide-link {
+     display: inline-block;
+     text-decoration: none;
+     background-color: #fff;
+     padding-left: 18px;
+     padding-right: 18px;
+     font-size: 14px;
+     color: #4c4c4c;
+     position: relative;
+     z-index: 2;
+    .if-open {
+      display: inline;
+    }
+    .if-close {
+      display: none;
+    }
+    &.close{
+      .if-open {
+        display: none;
+      }
+      .if-close {
+        display: inline;
+      }
     }
   }
   &__inputs{
@@ -218,6 +251,10 @@
     @media($bp-larger-than-tablet) {
       max-width: 250px;
     }
+    &.error {
+      border-color: #f94a4a;
+      background-color: #f9dcdc;
+    }
   }
   textarea{
     color: #4c4c4c;
@@ -233,6 +270,10 @@
     }
     @media($bp-larger-than-desktop) {
       width: 520px;
+    }
+    &.error {
+      border-color: #f94a4a;
+      background-color: #f9dcdc;
     }
   }
 

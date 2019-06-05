@@ -84,11 +84,19 @@
   @media($bp-larger-than-desktophd){
     display: block;
   }
+  &.slick-slider{
+    display: none;
+    @media($bp-larger-than-desktophd){
+      display: block;
+    }
+  }
   &__item{
-    margin-bottom: 9px;
+    margin-bottom: 7px;
     img{
       margin-left: auto;
       margin-right: auto;
+      border: 1px solid #ebebeb;
+      border-radius: 3px;
     }
   }
   .slick-current{
@@ -116,6 +124,8 @@
 }
 .product-image{
   &__list{
+    max-width: 360px;
+    width: 100%;
     @media($bp-larger-than-desktop) {
       width: 360px;
     }
@@ -211,6 +221,8 @@
     img{
       width: 100%;
       max-width: 100%;
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
     }
   }
 }
