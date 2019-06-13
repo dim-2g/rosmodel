@@ -577,7 +577,7 @@ initMainIssuesSlider  = function() {
                     breakpoint: 750,
                     settings: {
                         vertical: false,
-                        dots: true,
+                        dots: false,
                     }
                 }
             ]
